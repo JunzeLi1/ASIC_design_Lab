@@ -1,0 +1,202 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/ecegrid/a/mg39/ece337/Lab3
+vadder_16
+Z1 DXx6 sv_std 3 std 0 22 >9az<^>2ff9DAl3OFGaAf1
+!s110 1706155560
+!i10b 1
+!s100 KW;i7J7nC?k_2imi]i5H03
+I>YfKf2DXMH`A0^jjaRRih2
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+!s105 adder_16_sv_unit
+S1
+R0
+Z3 w1706148544
+8/home/ecegrid/a/mg39/ece337/Lab3/source/adder_16.sv
+F/home/ecegrid/a/mg39/ece337/Lab3/source/adder_16.sv
+L0 7
+Z4 OE;L;10.7a;67
+r1
+!s85 0
+31
+!s108 1706155560.000000
+!s107 /home/ecegrid/a/mg39/ece337/Lab3/source/adder_16.sv|
+!s90 -nologo|-work|Source|/home/ecegrid/a/mg39/ece337/Lab3/source/adder_16.sv|
+!i113 0
+Z5 o-nologo -work Source
+Z6 tCoverage 63 CoverExcludeDefault 1 CoverOpt 1 CoverShortCircuit 0 CvgOpt 0
+vadder_16bit
+R1
+!s110 1706162238
+!i10b 1
+!s100 ^;i59TFQIC7EONaTMj^z30
+Im5JMEim><]zi>@YX4HSC81
+R2
+!s105 adder_16bit_sv_unit
+S1
+R0
+w1706162238
+8/home/ecegrid/a/mg39/ece337/Lab3/source/adder_16bit.sv
+F/home/ecegrid/a/mg39/ece337/Lab3/source/adder_16bit.sv
+L0 7
+R4
+r1
+!s85 0
+31
+!s108 1706162238.000000
+!s107 /home/ecegrid/a/mg39/ece337/Lab3/source/adder_16bit.sv|
+!s90 -nologo|-work|Source|/home/ecegrid/a/mg39/ece337/Lab3/source/adder_16bit.sv|
+!i113 0
+R5
+R6
+vadder_1bit
+R1
+!s110 1706161905
+!i10b 1
+!s100 f28:M7B_h]?[>[lPZAHm>2
+I=X6IPNnOLg^WP5Cd@<2353
+R2
+!s105 adder_1bit_sv_unit
+S1
+R0
+w1706161905
+8/home/ecegrid/a/mg39/ece337/Lab3/source/adder_1bit.sv
+F/home/ecegrid/a/mg39/ece337/Lab3/source/adder_1bit.sv
+L0 8
+R4
+r1
+!s85 0
+31
+!s108 1706161905.000000
+!s107 /home/ecegrid/a/mg39/ece337/Lab3/source/adder_1bit.sv|
+!s90 -nologo|-work|Source|/home/ecegrid/a/mg39/ece337/Lab3/source/adder_1bit.sv|
+!i113 0
+R5
+R6
+vadder_8bit
+R1
+!s110 1706155587
+!i10b 1
+!s100 :=B^DRQW8]o;cTP<[2MjH0
+IAM=i3QZf[jP[_417IaY2B3
+R2
+!s105 adder_8bit_sv_unit
+S1
+R0
+w1706155586
+8/home/ecegrid/a/mg39/ece337/Lab3/source/adder_8bit.sv
+F/home/ecegrid/a/mg39/ece337/Lab3/source/adder_8bit.sv
+L0 7
+R4
+r1
+!s85 0
+31
+!s108 1706155587.000000
+!s107 /home/ecegrid/a/mg39/ece337/Lab3/source/adder_8bit.sv|
+!s90 -nologo|-work|Source|/home/ecegrid/a/mg39/ece337/Lab3/source/adder_8bit.sv|
+!i113 0
+R5
+R6
+vadder_nbit
+R1
+!s110 1706161945
+!i10b 1
+!s100 S<HX_D4Lc?L5mO1<9G7mS2
+I:n9;Y57cJ:bdhjN=UH2=d1
+R2
+!s105 adder_nbit_sv_unit
+S1
+R0
+w1706161945
+8/home/ecegrid/a/mg39/ece337/Lab3/source/adder_nbit.sv
+F/home/ecegrid/a/mg39/ece337/Lab3/source/adder_nbit.sv
+L0 8
+R4
+r1
+!s85 0
+31
+!s108 1706161945.000000
+!s107 /home/ecegrid/a/mg39/ece337/Lab3/source/adder_nbit.sv|
+!s90 -nologo|-work|Source|/home/ecegrid/a/mg39/ece337/Lab3/source/adder_nbit.sv|
+!i113 0
+R5
+R6
+vtb_adder_16bit
+R1
+!s110 1706156525
+!i10b 1
+!s100 [526`=GJ7:WbIZRPKOaeD0
+Iz^KTLWDU4RJ04;JED4IGS2
+R2
+!s105 tb_adder_16bit_sv_unit
+S1
+R0
+w1706156525
+8/home/ecegrid/a/mg39/ece337/Lab3/source/tb_adder_16bit.sv
+F/home/ecegrid/a/mg39/ece337/Lab3/source/tb_adder_16bit.sv
+L0 6
+R4
+r1
+!s85 0
+31
+!s108 1706156525.000000
+!s107 /home/ecegrid/a/mg39/ece337/Lab3/source/tb_adder_16bit.sv|
+!s90 -nologo|-work|Source|/home/ecegrid/a/mg39/ece337/Lab3/source/tb_adder_16bit.sv|
+!i113 0
+R5
+R6
+vtb_adder_1bit
+R1
+!s110 1706159533
+!i10b 1
+!s100 5QVVJchFPiJYL3P<AnBAP3
+IWkSUNVR[P8=?]?I`J;Dhi1
+R2
+!s105 tb_adder_1bit_sv_unit
+S1
+R0
+R3
+8/home/ecegrid/a/mg39/ece337/Lab3/source/tb_adder_1bit.sv
+F/home/ecegrid/a/mg39/ece337/Lab3/source/tb_adder_1bit.sv
+L0 6
+R4
+r1
+!s85 0
+31
+!s108 1706159533.000000
+!s107 /home/ecegrid/a/mg39/ece337/Lab3/source/tb_adder_1bit.sv|
+!s90 -nologo|-work|Source|/home/ecegrid/a/mg39/ece337/Lab3/source/tb_adder_1bit.sv|
+!i113 0
+R5
+R6
+vtb_adder_nbit
+R1
+!s110 1706162032
+!i10b 1
+!s100 FEOmH_HRGMiUfCLlU`7UJ2
+IjWazOdgOTAT3PKV;>WIGS3
+R2
+!s105 tb_adder_nbit_sv_unit
+S1
+R0
+w1706156801
+8/home/ecegrid/a/mg39/ece337/Lab3/source/tb_adder_nbit.sv
+F/home/ecegrid/a/mg39/ece337/Lab3/source/tb_adder_nbit.sv
+L0 11
+R4
+r1
+!s85 0
+31
+!s108 1706162032.000000
+!s107 /home/ecegrid/a/mg39/ece337/Lab3/source/tb_adder_nbit.sv|
+!s90 -nologo|-work|Source|/home/ecegrid/a/mg39/ece337/Lab3/source/tb_adder_nbit.sv|
+!i113 0
+R5
+R6

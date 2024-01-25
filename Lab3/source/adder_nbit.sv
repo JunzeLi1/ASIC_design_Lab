@@ -22,6 +22,16 @@ module adder_nbit
     assign carrys[0] = carry_in;
     generate
         for(i = 0; i <= (BIT_WIDTH - 1); i = i + 1) begin
+            always @(*) begin
+                assert((a[i] == 1'b1) || (a[i] == 1'b0))
+                else $error ("Input 'a' of component is not a digtal logic value");
+
+                assert((b[i] == 1'b1) || (b[i] == 1'b0))
+                else $error ("Input 'b' of component is not a digtal logic value");
+
+                assert((carrys[i] == 1'b1) || (carrys[i] == 1'b0))
+                else $error ("Input 'carrys' of component is not a digtal logic value");
+            end
             adder_1bit IX (.a(a[i]), .b(b[i]), .carry_in(carrys[i]), .sum(sum[i]), .carry_out(carrys[i+1]));
         end
     endgenerate

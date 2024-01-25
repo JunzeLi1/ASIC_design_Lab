@@ -38,7 +38,7 @@ module tb_adder_nbit
 	reg [MAX_OUTPUT_BIT:0] tb_expected_outputs;
 	
 	// DUT port map
-	adder_4bit DUT(.a(tb_a), .b(tb_b), .carry_in(tb_carry_in), .sum(tb_sum), .overflow(tb_carry_out));
+	adder_nbit DUT(.a(tb_a), .b(tb_b), .carry_in(tb_carry_in), .sum(tb_sum), .overflow(tb_carry_out));
 	
 	// Connect individual test input bits to a vector for easier testing
 	assign tb_a					= tb_test_inputs[TEST_B_BIT-1 : TEST_A_BIT];
