@@ -17,26 +17,17 @@ module comparator
 	output logic eq
 );
 
-	logic gte;
-	logic lte;
-
 	always_comb begin: COMPARATOR
-		if (not (a > b))
-			lte <= 1'b1;
-		if (!(b > a)
-			assign gte = 1'b1;
-		
-		if (not (lte == 1'b1))
-			GT = 1'b1;
-			LT == 1'b0;
-			EQ = 1'b0;
-		else if (not (gte == 1))
-			GT = 1'b0;
-			LT = 1'b1;
-			EQ = 1'b0;
-		else
-			GT = 1'b0;
-			LT = 1'b0;
-			EQ = 1'b1;
-	end
+                gt = 0;
+                lt = 0;
+                eq = 0;
+
+		if (a > b) begin
+		        gt = 1'b1;
+                end else if (a < b) begin
+                        lt = 1'b1;
+                end else begin
+                        eq = 1'b1;
+                    end
+               end
 endmodule;

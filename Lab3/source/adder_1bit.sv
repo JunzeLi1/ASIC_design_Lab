@@ -6,8 +6,8 @@
 // Version:     1.0  Initial Design Entry
 // Description: .
 module adder_1bit(
-    input wire a, b, carry_in,
-    output reg sum, carry_out
+    input logic a, b, carry_in,
+    output logic sum, carry_out
 );
     always @ (*) begin
         assert((a == 1'b1) || (a == 1'b0))
@@ -19,9 +19,10 @@ module adder_1bit(
         assert((carry_in == 1'b1) || (carry_in == 1'b0))
         else $error ("Input 'carry_in' of component is not a digtal logic value");
 
-        sum = carry_in ^ (a ^ b);
-        carry_out = ((~carry_in) & b & a) | (carry_in & (b | a));
+        
     end
+    assign sum = carry_in ^ (a ^ b);
+    assign carry_out = ((~carry_in) & b & a) | (carry_in & (b | a));
 
 
 endmodule

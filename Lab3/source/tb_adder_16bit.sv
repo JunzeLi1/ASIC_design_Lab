@@ -53,34 +53,85 @@ adder_16bit DUT (.a(tb_a), .b(tb_b), .carry_in(tb_carry_in), .sum(tb_sum), .over
 initial begin
   // Create the test-vector array with enough slots for test cases
   // STUDENT TODO: Update the array declaration to have enough slots
-  tb_test_cases = new[4];
+  tb_test_cases = new[14];
 
   // First Test Case/Test-Vector
-  tb_test_cases[0].test_name = "Zeros Check";
+  tb_test_cases[0].test_name = "Zeros Check, tb0";
   tb_test_cases[0].test_a    = '0;
   tb_test_cases[0].test_b    = '0;
   tb_test_cases[0].test_cin  = 1'b0;
 
-  // STUDENT TODO: Add your additional test cases here after increasing the array size
-  tb_test_cases[1].test_name = "A Large B small";
-  tb_test_cases[1].test_a    = 16'd155000;
-  tb_test_cases[1].test_b    = 1'b1;
-  tb_test_cases[1].test_cin  = 1'b0;
+  tb_test_cases[1].test_name = "Zeros Check, tb1";
+  tb_test_cases[1].test_a    = '0;
+  tb_test_cases[1].test_b    = '0;
+  tb_test_cases[1].test_cin  = 1'b1;
 
-  tb_test_cases[2].test_name = "A small B Large";
-  tb_test_cases[2].test_a    = 1'b1;
-  tb_test_cases[2].test_b    = 16'd155020;
+  // STUDENT TODO: Add your additional test cases here after increasing the array size
+  tb_test_cases[2].test_name = "A Large B small, tb 0";
+  tb_test_cases[2].test_a    = 16'd155000;
+  tb_test_cases[2].test_b    = 1'b1;
   tb_test_cases[2].test_cin  = 1'b0;
 
-  tb_test_cases[3].test_name = "A Large B Large";
-  tb_test_cases[3].test_a    = 16'd111000;
-  tb_test_cases[3].test_b    = 16'd155020;
-  tb_test_cases[3].test_cin  = 1'b0;
+  tb_test_cases[3].test_name = "A Large B small, tb1";
+  tb_test_cases[3].test_a    = 16'd155000;
+  tb_test_cases[3].test_b    = 1'b1;
+  tb_test_cases[3].test_cin  = 1'b1;
 
-  tb_test_cases[4].test_name = "A small B small";
-  tb_test_cases[4].test_a    = 16'b1;
-  tb_test_cases[4].test_b    = 16'b1;
+
+  tb_test_cases[4].test_name = "A small B Large, tb 0";
+  tb_test_cases[4].test_a    = 1'b1;
+  tb_test_cases[4].test_b    = 16'd155020;
   tb_test_cases[4].test_cin  = 1'b0;
+
+  tb_test_cases[5].test_name = "A small B Large, tb1";
+  tb_test_cases[5].test_a    = 1'b1;
+  tb_test_cases[5].test_b    = 16'd155020;
+  tb_test_cases[5].test_cin  = 1'b1;
+
+  tb_test_cases[6].test_name = "A Large B Large tb0";
+  tb_test_cases[6].test_a    = 16'd111000;
+  tb_test_cases[6].test_b    = 16'd155020;
+  tb_test_cases[6].test_cin  = 1'b0;
+
+  tb_test_cases[7].test_name = "A Large B Large, tb 1";
+  tb_test_cases[7].test_a    = 16'd111000;
+  tb_test_cases[7].test_b    = 16'd155020;
+  tb_test_cases[7].test_cin  = 1'b1;
+
+  tb_test_cases[8].test_name = "A small B small, tb0";
+  tb_test_cases[8].test_a    = 16'b1;
+  tb_test_cases[8].test_b    = 16'b1;
+  tb_test_cases[8].test_cin  = 1'b0;
+
+  tb_test_cases[9].test_name = "A small B small, tb1";
+  tb_test_cases[9].test_a    = 16'b1;
+  tb_test_cases[9].test_b    = 16'b1;
+  tb_test_cases[9].test_cin  = 1'b1;
+
+  tb_test_cases[10].test_name = "A small B Largest, tb 0";
+  tb_test_cases[10].test_a    = 16'b1;
+  tb_test_cases[10].test_b    = '1;
+  tb_test_cases[10].test_cin  = 1'b0;
+
+  tb_test_cases[10].test_name = "A small B Largest, tb 0";
+  tb_test_cases[10].test_a    = 16'b0;
+  tb_test_cases[10].test_b    = '1;
+  tb_test_cases[10].test_cin  = 1'b0;
+
+  tb_test_cases[11].test_name = "A small B Largest, tb 0";
+  tb_test_cases[11].test_a    = '1;
+  tb_test_cases[11].test_b    = '0;
+  tb_test_cases[11].test_cin  = 1'b0;
+
+  tb_test_cases[12].test_name = "A small B Largest, tb 0";
+  tb_test_cases[12].test_a    = 16'b0;
+  tb_test_cases[12].test_b    = '1;
+  tb_test_cases[12].test_cin  = 1'b1;
+  
+  tb_test_cases[13].test_name = "A small B Largest, tb 0";
+  tb_test_cases[13].test_a    = '1;
+  tb_test_cases[13].test_b    = '0;
+  tb_test_cases[13].test_cin  = 1'b1;
 end
 
 // Handle expected results bit-slice mappings

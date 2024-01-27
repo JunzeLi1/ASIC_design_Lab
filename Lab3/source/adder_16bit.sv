@@ -25,7 +25,13 @@ module adder_16bit
 		end
 	endgenerate
 
-	always@(carry_in) begin
+	always@(a, b, carry_in) begin
+		assert(a <= 2 ** 15)
+			else $error ("Input 'a' of component is not a digtal logic value");
+		
+		assert(b <= 2 ** 15)
+			else $error ("Input 'b' of component is not a digtal logic value");
+
 		assert((carry_in == 1'b1) || (carry_in == 1'b0))
             else $error ("Input 'carry_in' of component is not a digtal logic value");
     end

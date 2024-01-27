@@ -1,0 +1,53 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/ecegrid/a/mg39/ece337/Lab1
+vcomparator
+Z1 !s110 1705293904
+!i10b 1
+!s100 :8bz5_1VY<geAOF3i0=d;0
+I8gamd8PEJb=@LhfHmV::K0
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+Z3 w1704994365
+Z4 8/home/ecegrid/a/mg39/ece337/Lab1/mapped/comparator.v
+Z5 F/home/ecegrid/a/mg39/ece337/Lab1/mapped/comparator.v
+L0 124
+Z6 OE;L;10.7a;67
+r1
+!s85 0
+31
+Z7 !s108 1705293904.000000
+!s107 /home/ecegrid/a/mg39/ece337/Lab1/mapped/comparator.v|
+Z8 !s90 -nologo|-work|Source|/home/ecegrid/a/mg39/ece337/Lab1/mapped/comparator.v|
+!i113 0
+Z9 o-nologo -work Source
+Z10 tCoverage 63 CoverExcludeDefault 1 CoverOpt 1 CoverShortCircuit 0 CvgOpt 0
+vcomparator_DW01_cmp6_0
+R1
+!i10b 1
+!s100 7>E<7bhO>MOJN>gGW8Vc21
+IMmdPUTLNFMnzUBRD17G=21
+R2
+R0
+R3
+R4
+R5
+L0 8
+R6
+r1
+!s85 0
+31
+R7
+Z11 !s107 /home/ecegrid/a/mg39/ece337/Lab1/mapped/comparator.v|
+R8
+!i113 0
+R9
+R10
+ncomparator_@d@w01_cmp6_0

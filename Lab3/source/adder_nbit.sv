@@ -10,13 +10,13 @@ module adder_nbit
     parameter BIT_WIDTH = 4   
 )
 (
-    input wire [(BIT_WIDTH - 1) : 0] a, b,
-    input wire carry_in,
-    output wire [(BIT_WIDTH - 1) : 0] sum,
-    output wire overflow
+    input logic [(BIT_WIDTH - 1) : 0] a, b,
+    input logic carry_in,
+    output logic [(BIT_WIDTH - 1) : 0] sum,
+    output logic overflow
 );
 
-    wire [BIT_WIDTH : 0] carrys;
+    logic [BIT_WIDTH : 0] carrys;
     genvar i;
 
     assign carrys[0] = carry_in;
@@ -28,10 +28,11 @@ module adder_nbit
 
                 assert((b[i] == 1'b1) || (b[i] == 1'b0))
                 else $error ("Input 'b' of component is not a digtal logic value");
-
-                assert((carrys[i] == 1'b1) || (carrys[i] == 1'b0))
-                else $error ("Input 'carrys' of component is not a digtal logic value");
             end
+            always@(carry_in) begin
+		        assert((carry_in == 1'b1) || (carry_in == 1'b0))
+            else $error ("Input 'carry_in' of component is not a digtal logic value");
+    end
             adder_1bit IX (.a(a[i]), .b(b[i]), .carry_in(carrys[i]), .sum(sum[i]), .carry_out(carrys[i+1]));
         end
     endgenerate

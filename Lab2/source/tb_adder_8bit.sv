@@ -1,4 +1,10 @@
 // $Id: $
+// File name:   tb_adder_8bit.sv
+// Created:     1/24/2024
+// Author:      Junze Li
+// Lab Section: 337-016
+// Version:     1.0  Initial Design Entry
+// $Id: $
 // File name:   tb_adder_4bit.sv
 // Created:     1/18/2024
 // Author:      Junze Li
@@ -8,10 +14,10 @@
 
 `timescale 1ns / 100ps
 
-module tb_adder_nbit
+module tb_adder_8bit
 ();
 	// Define local parameters used by the test bench
-	localparam NUM_INPUT_BITS			= 4;
+	localparam NUM_INPUT_BITS			= 8;
 	localparam NUM_OUTPUT_BITS		= NUM_INPUT_BITS + 1;
 	localparam MAX_OUTPUT_BIT			= NUM_OUTPUT_BITS - 1;
 	localparam NUM_TEST_BITS 			= (NUM_INPUT_BITS * 2) + 1;
@@ -26,10 +32,10 @@ module tb_adder_nbit
 	localparam TEST_DELAY					= 10;
 	
 	// Declare Design Under Test (DUT) portmap signals
-	wire	[3:0] tb_a;
-	wire	[3:0] tb_b;
-	logic	tb_carry_in;
-	wire	[3:0] tb_sum;
+	wire	[7:0] tb_a;
+	wire	[7:0] tb_b;
+	wire	tb_carry_in;
+	wire	[7:0] tb_sum;
 	wire	tb_carry_out;
 	
 	// Declare test bench signals
@@ -38,7 +44,7 @@ module tb_adder_nbit
 	reg [MAX_OUTPUT_BIT:0] tb_expected_outputs;
 	
 	// DUT port map
-	adder_nbit DUT(.a(tb_a), .b(tb_b), .carry_in(tb_carry_in), .sum(tb_sum), .overflow(tb_carry_out));
+	adder_8bit DUT(.a(tb_a), .b(tb_b), .carry_in(tb_carry_in), .sum(tb_sum), .overflow(tb_carry_out));
 	
 	// Connect individual test input bits to a vector for easier testing
 	assign tb_a					= tb_test_inputs[TEST_B_BIT-1 : TEST_A_BIT];

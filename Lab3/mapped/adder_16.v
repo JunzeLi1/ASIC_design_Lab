@@ -1,73 +1,41 @@
 /////////////////////////////////////////////////////////////
 // Created by: Synopsys DC Expert(TM) in wire load mode
 // Version   : K-2015.06-SP1
-// Date      : Wed Jan 24 22:56:32 2024
+// Date      : Thu Jan 25 12:33:53 2024
 /////////////////////////////////////////////////////////////
 
 
-module adder_16_DW01_add_1 ( A, B, CI, SUM, CO );
+module adder_16_DW01_add_0 ( A, B, CI, SUM, CO );
   input [16:0] A;
   input [16:0] B;
   output [16:0] SUM;
   input CI;
   output CO;
-  wire   n1, n2, n3, n4, n5, n6, n7, n9, n10, n11, n12, n13, n14, n15, n16,
-         n17, n18, n19, n20, n22, n24, n25, n26, n27, n28, n30, n32, n33, n34,
-         n35, n36, n38, n40, n41, n42, n43, n44, n45, n47, n49, n51, n109,
-         n110, n111;
 
-  FAX1 U2 ( .A(B[15]), .B(A[15]), .C(n9), .YC(SUM[16]), .YS(SUM[15]) );
-  FAX1 U3 ( .A(B[14]), .B(A[14]), .C(n10), .YC(n9), .YS(SUM[14]) );
-  FAX1 U4 ( .A(B[13]), .B(A[13]), .C(n11), .YC(n10), .YS(SUM[13]) );
-  FAX1 U5 ( .A(B[12]), .B(A[12]), .C(n12), .YC(n11), .YS(SUM[12]) );
-  FAX1 U6 ( .A(B[11]), .B(A[11]), .C(n13), .YC(n12), .YS(SUM[11]) );
-  FAX1 U7 ( .A(B[10]), .B(A[10]), .C(n14), .YC(n13), .YS(SUM[10]) );
-  FAX1 U8 ( .A(B[9]), .B(A[9]), .C(n15), .YC(n14), .YS(SUM[9]) );
-  FAX1 U9 ( .A(B[8]), .B(A[8]), .C(n16), .YC(n15), .YS(SUM[8]) );
-  FAX1 U10 ( .A(B[7]), .B(A[7]), .C(n17), .YC(n16), .YS(SUM[7]) );
-  XOR2X1 U11 ( .A(n20), .B(n1), .Y(SUM[6]) );
-  OAI21X1 U12 ( .A(n20), .B(n18), .C(n19), .Y(n17) );
-  NAND2X1 U13 ( .A(n19), .B(n45), .Y(n1) );
-  NOR2X1 U15 ( .A(B[6]), .B(A[6]), .Y(n18) );
-  NAND2X1 U16 ( .A(B[6]), .B(A[6]), .Y(n19) );
-  XNOR2X1 U17 ( .A(n25), .B(n2), .Y(SUM[5]) );
-  AOI21X1 U18 ( .A(n111), .B(n25), .C(n22), .Y(n20) );
-  NAND2X1 U21 ( .A(n24), .B(n111), .Y(n2) );
-  NAND2X1 U24 ( .A(B[5]), .B(A[5]), .Y(n24) );
-  XOR2X1 U25 ( .A(n28), .B(n3), .Y(SUM[4]) );
-  OAI21X1 U26 ( .A(n28), .B(n26), .C(n27), .Y(n25) );
-  NAND2X1 U27 ( .A(n27), .B(n47), .Y(n3) );
-  NOR2X1 U29 ( .A(B[4]), .B(A[4]), .Y(n26) );
-  NAND2X1 U30 ( .A(B[4]), .B(A[4]), .Y(n27) );
-  XNOR2X1 U31 ( .A(n33), .B(n4), .Y(SUM[3]) );
-  AOI21X1 U32 ( .A(n110), .B(n33), .C(n30), .Y(n28) );
-  NAND2X1 U35 ( .A(n32), .B(n110), .Y(n4) );
-  NAND2X1 U38 ( .A(B[3]), .B(A[3]), .Y(n32) );
-  XOR2X1 U39 ( .A(n36), .B(n5), .Y(SUM[2]) );
-  OAI21X1 U40 ( .A(n36), .B(n34), .C(n35), .Y(n33) );
-  NAND2X1 U41 ( .A(n35), .B(n49), .Y(n5) );
-  NOR2X1 U43 ( .A(B[2]), .B(A[2]), .Y(n34) );
-  NAND2X1 U44 ( .A(B[2]), .B(A[2]), .Y(n35) );
-  XNOR2X1 U45 ( .A(n41), .B(n6), .Y(SUM[1]) );
-  AOI21X1 U46 ( .A(n109), .B(n41), .C(n38), .Y(n36) );
-  NAND2X1 U49 ( .A(n40), .B(n109), .Y(n6) );
-  NAND2X1 U52 ( .A(B[1]), .B(A[1]), .Y(n40) );
-  XNOR2X1 U53 ( .A(n7), .B(CI), .Y(SUM[0]) );
-  OAI21X1 U54 ( .A(n42), .B(n44), .C(n43), .Y(n41) );
-  NAND2X1 U55 ( .A(n43), .B(n51), .Y(n7) );
-  NOR2X1 U57 ( .A(B[0]), .B(A[0]), .Y(n42) );
-  NAND2X1 U58 ( .A(B[0]), .B(A[0]), .Y(n43) );
-  OR2X2 U63 ( .A(B[1]), .B(A[1]), .Y(n109) );
-  OR2X2 U64 ( .A(B[3]), .B(A[3]), .Y(n110) );
-  OR2X2 U65 ( .A(B[5]), .B(A[5]), .Y(n111) );
-  INVX2 U66 ( .A(n42), .Y(n51) );
-  INVX2 U67 ( .A(n34), .Y(n49) );
-  INVX2 U68 ( .A(n26), .Y(n47) );
-  INVX2 U69 ( .A(n18), .Y(n45) );
-  INVX2 U70 ( .A(CI), .Y(n44) );
-  INVX2 U71 ( .A(n40), .Y(n38) );
-  INVX2 U72 ( .A(n32), .Y(n30) );
-  INVX2 U73 ( .A(n24), .Y(n22) );
+  wire   [16:1] carry;
+
+  FAX1 U1_15 ( .A(A[15]), .B(B[15]), .C(carry[15]), .YC(SUM[16]), .YS(SUM[15])
+         );
+  FAX1 U1_14 ( .A(A[14]), .B(B[14]), .C(carry[14]), .YC(carry[15]), .YS(
+        SUM[14]) );
+  FAX1 U1_13 ( .A(A[13]), .B(B[13]), .C(carry[13]), .YC(carry[14]), .YS(
+        SUM[13]) );
+  FAX1 U1_12 ( .A(A[12]), .B(B[12]), .C(carry[12]), .YC(carry[13]), .YS(
+        SUM[12]) );
+  FAX1 U1_11 ( .A(A[11]), .B(B[11]), .C(carry[11]), .YC(carry[12]), .YS(
+        SUM[11]) );
+  FAX1 U1_10 ( .A(A[10]), .B(B[10]), .C(carry[10]), .YC(carry[11]), .YS(
+        SUM[10]) );
+  FAX1 U1_9 ( .A(A[9]), .B(B[9]), .C(carry[9]), .YC(carry[10]), .YS(SUM[9]) );
+  FAX1 U1_8 ( .A(A[8]), .B(B[8]), .C(carry[8]), .YC(carry[9]), .YS(SUM[8]) );
+  FAX1 U1_7 ( .A(A[7]), .B(B[7]), .C(carry[7]), .YC(carry[8]), .YS(SUM[7]) );
+  FAX1 U1_6 ( .A(A[6]), .B(B[6]), .C(carry[6]), .YC(carry[7]), .YS(SUM[6]) );
+  FAX1 U1_5 ( .A(A[5]), .B(B[5]), .C(carry[5]), .YC(carry[6]), .YS(SUM[5]) );
+  FAX1 U1_4 ( .A(A[4]), .B(B[4]), .C(carry[4]), .YC(carry[5]), .YS(SUM[4]) );
+  FAX1 U1_3 ( .A(A[3]), .B(B[3]), .C(carry[3]), .YC(carry[4]), .YS(SUM[3]) );
+  FAX1 U1_2 ( .A(A[2]), .B(B[2]), .C(carry[2]), .YC(carry[3]), .YS(SUM[2]) );
+  FAX1 U1_1 ( .A(A[1]), .B(B[1]), .C(carry[1]), .YC(carry[2]), .YS(SUM[1]) );
+  FAX1 U1_0 ( .A(A[0]), .B(B[0]), .C(CI), .YC(carry[1]), .YS(SUM[0]) );
 endmodule
 
 
@@ -79,7 +47,7 @@ module adder_16 ( a, b, carry_in, sum, overflow );
   output overflow;
 
 
-  adder_16_DW01_add_1 r304 ( .A({1'b0, a}), .B({1'b0, b}), .CI(carry_in), 
+  adder_16_DW01_add_0 r304 ( .A({1'b0, a}), .B({1'b0, b}), .CI(carry_in), 
         .SUM({overflow, sum}) );
 endmodule
 
