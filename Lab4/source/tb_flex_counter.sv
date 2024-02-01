@@ -31,6 +31,9 @@ module tb_flex_counter();
   string tb_test_case;
   integer tb_stream_test_num;
   string tb_stream_check_tag;
+
+  logic [3:0] temp_count;
+  integer i;
   
   // Task for standard DUT reset procedure
   task reset_dut;
@@ -258,14 +261,9 @@ endtask
     check_output( 4'b0100, 1'b1, 
                   "after processing delay");
 
-        // STUDENT: Add your additional test cases here
-    // ************************************************************************    
-    // Test Case 6: Clearing while counting to check clear vs. count enable priority
-    // ************************************************************************
     @(negedge tb_clk); 
     tb_test_num = tb_test_num + 1;
     tb_test_case = "Clearing at first place";
-    // Start out with inactive value and reset the DUT to isolate from prior tests
     tb_clear = INACTIVE_VALUE;
     tb_count_enable = INACTIVE_VALUE;
     tb_rollover_val = 4'b1111;
@@ -278,9 +276,11 @@ endtask
     @(posedge tb_clk);
     @(posedge tb_clk);
     @(posedge tb_clk);
-    // Move away from risign edge and allow for propagation delays before checking
+
     check_output( 4'b0000, 1'b0, 
                   "after processing delay");
+
+    // Last test case
     $stop;
   end
 endmodule
