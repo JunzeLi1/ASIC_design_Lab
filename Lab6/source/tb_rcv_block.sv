@@ -295,7 +295,7 @@ module tb_rcv_block();
     check_outputs(tb_test_data_read);
   
     // Append additonal test cases here (such as overrun case)
-    
+    $stop;
   end
 
 endmodule
