@@ -10,7 +10,7 @@ cModel Technology
 Z0 d/home/ecegrid/a/mg39/ece337/Lab4
 vflex_counter
 Z1 DXx6 sv_std 3 std 0 22 >9az<^>2ff9DAl3OFGaAf1
-!s110 1706730371
+!s110 1707796187
 !i10b 1
 !s100 ce9YBH0=Wa?JdkoF]f>>G0
 I>2N[Tjz?h>8]cU[GI;[^83
@@ -26,7 +26,7 @@ Z3 OE;L;10.7a;67
 r1
 !s85 0
 31
-!s108 1706730371.000000
+!s108 1707796187.000000
 !s107 /home/ecegrid/a/mg39/ece337/Lab4/source/flex_counter.sv|
 !s90 -nologo|-work|Source|/home/ecegrid/a/mg39/ece337/Lab4/source/flex_counter.sv|
 !i113 0
@@ -131,7 +131,7 @@ R4
 R5
 vtb_flex_counter
 R1
-!s110 1706768651
+!s110 1707800934
 !i10b 1
 !s100 hVj7CRJCGk>QHJ8?RV=mX2
 IHndo[UMEJ09MoE;gg?E=T2
@@ -147,7 +147,7 @@ R3
 r1
 !s85 0
 31
-!s108 1706768651.000000
+!s108 1707800934.000000
 Z14 !s107 /home/ecegrid/a/mg39/ece337/Lab4/source/tb_flex_counter.sv|
 Z15 !s90 -nologo|-work|Source|/home/ecegrid/a/mg39/ece337/Lab4/source/tb_flex_counter.sv|
 !i113 0
@@ -155,7 +155,7 @@ R4
 R5
 vtb_sync_high
 R1
-!s110 1707262569
+!s110 1707796181
 !i10b 1
 !s100 Y4hzE7OgZjUFj]EiFAmJ52
 IRHgd>^T5_];I_1NcY0<AG0
@@ -171,7 +171,7 @@ R3
 r1
 !s85 0
 31
-!s108 1707262569.000000
+!s108 1707796181.000000
 !s107 /home/ecegrid/a/mg39/ece337/Lab4/source/tb_sync_high.sv|
 !s90 -nologo|-work|Source|/home/ecegrid/a/mg39/ece337/Lab4/source/tb_sync_high.sv|
 !i113 0
