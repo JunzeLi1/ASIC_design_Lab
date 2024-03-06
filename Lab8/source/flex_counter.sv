@@ -9,7 +9,6 @@ module flex_counter
 #(
     parameter  NUM_CNT_BITS = 4
 )
-next_count_out
 (
     input logic clk, n_rst, clear, count_enable,
     input logic [NUM_CNT_BITS-1 : 0] rollover_val,

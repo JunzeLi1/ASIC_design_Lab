@@ -1,14 +1,12 @@
 // $Id: $
-// File name:   tb_apb_slave.sv
-// Created:     10/1/2018
-// Author:      Tim Pritchett
-// Lab Section: 9999
+// File name:   tb_apb_uart_rx.sv
+// Created:     3/4/2024
+// Author:      Junze Li
+// Lab Section: 337-016
 // Version:     1.0  Initial Design Entry
-// Description: Starter bus model based test bench for the apb-slave module
-
 `timescale 1ns / 10ps
 
-module tb_apb_slave();
+module tb_apb_uart_rx();
 
 // Timing related constants
 localparam CLK_PERIOD = 10;
@@ -33,6 +31,8 @@ localparam ADDR_RX_DATA  = 3'd6;
 // Student TODO: Update these based on the reset values for your config registers
 localparam RESET_BIT_PERIOD = '0;
 localparam RESET_DATA_SIZE  = '0;
+localparam READ = 0;
+localparam WRITE = 1;
 
 //*****************************************************************************
 // Declare TB Signals (Bus Model Controls)
@@ -88,6 +88,9 @@ logic [13:0] tb_bit_period;
 logic        tb_expected_data_read;
 logic [3:0]  tb_expected_data_size;
 logic [13:0] tb_expected_bit_period;
+logic tb_serial_in;
+logic [7:0] bit_stream;
+logic [7:0] tb_expected_prdata;
 
 
 //*****************************************************************************
@@ -132,24 +135,18 @@ apb_bus BFM ( .clk(tb_clk),
 //*****************************************************************************
 // DUT Instance
 //*****************************************************************************
-apb_slave DUT ( .clk(tb_clk), .n_rst(tb_n_rst),
+
+apb_uart_rx DUT ( .clk(tb_clk), .n_rst(tb_n_rst),
             // UART Operation signals
-            .rx_data(tb_rx_data),
-            .data_ready(tb_data_ready),
-            .overrun_error(tb_overrun_error),
-            .framing_error(tb_framing_error),
-            .data_read(tb_data_read),
-            // APB-Slave bus signals
+            .serial_in(tb_serial_in),
             .psel(tb_psel),
             .paddr(tb_paddr),
             .penable(tb_penable),
             .pwrite(tb_pwrite),
             .pwdata(tb_pwdata),
             .prdata(tb_prdata),
-            .pslverr(tb_pslverr),
-            // UART Configuration values
-            .data_size(tb_data_size),
-            .bit_period(tb_bit_period));
+            .pslverr(tb_pslverr)
+            );
 
 //*****************************************************************************
 // DUT Related TB Tasks
@@ -182,28 +179,13 @@ task check_outputs;
 begin
   tb_mismatch = 1'b0;
   tb_check    = 1'b1;
-  if(tb_expected_data_read == tb_data_read) begin // Check passed
-    $info("Correct 'data_read' output %s during %s test case", check_tag, tb_test_case);
+  
+  if(tb_expected_prdata == tb_prdata) begin // Check passed
+    $info("Correct 'pradata' output %s during %s test case", check_tag, tb_test_case);
   end
   else begin // Check failed
     tb_mismatch = 1'b1;
-    $error("Incorrect 'data_read' output %s during %s test case", check_tag, tb_test_case);
-  end
-
-  if(tb_expected_bit_period == tb_bit_period) begin // Check passed
-    $info("Correct 'bit_period' output %s during %s test case", check_tag, tb_test_case);
-  end
-  else begin // Check failed
-    tb_mismatch = 1'b1;
-    $error("Incorrect 'bit_period' output %s during %s test case", check_tag, tb_test_case);
-  end
-
-  if(tb_expected_data_size == tb_data_size) begin // Check passed
-    $info("Correct 'data_size' output %s during %s test case", check_tag, tb_test_case);
-  end
-  else begin // Check failed
-    tb_mismatch = 1'b1;
-    $error("Incorrect 'data_size' output %s during %s test case", check_tag, tb_test_case);
+    $error("Incorrect 'prdata' output %s during %s test case", check_tag, tb_test_case);
   end
 
   // Wait some small amount of time so check pulse timing is visible on waves
@@ -269,6 +251,10 @@ begin
   @(negedge tb_clk);
   tb_enable_transactions = 1'b0;
 end
+endtask
+
+task send_packet;
+
 endtask
 
 //*****************************************************************************
