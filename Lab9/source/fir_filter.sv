@@ -22,11 +22,11 @@ module fir_filter (
     logic overflow;
     logic [16:0] outreg_data;
 
-    sync_low sync(.clk(clk), .n_rst(n_reset), .async_in(data_ready), 
-                .sync_out(dr));
-    sync_low sync1(.clk(clk), .n_rst(n_reset), .async_in(load_coeff), 
-                .sync_out(lc));
-    controller control_unit(.clk(clk), .n_rst(n_reset), .dr(dr), .lc(lc), .overflow(overflow),
+    // sync_low sync(.clk(clk), .n_rst(n_reset), .async_in(data_ready), 
+    //             .sync_out(dr));
+    // sync_low sync1(.clk(clk), .n_rst(n_reset), .async_in(load_coeff), 
+    //             .sync_out(lc));
+    controller control_unit(.clk(clk), .n_rst(n_reset), .dr(data_ready), .lc(load_coeff), .overflow(overflow),
             .cnt_up(cnt_up), .clear(clear), .modwait(modwait), .err(err), .op(op), .src1(src1), 
             .src2(src2), .dest(dest));
     counter counter_fir(.clk(clk), .n_rst(n_reset), .cnt_up(cnt_up), .clear(clear), .one_k_samples(one_k_samples));

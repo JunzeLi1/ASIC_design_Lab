@@ -413,11 +413,11 @@ initial begin
   reset_dut();
 
   // Enqueue the needed transactions (Low Coeff Address => F0, just add 2 x index)
-  tb_test_data = 16'h8000; // Fixed decimal value of 1.0
+  tb_test_data = 16'h8100; // Fixed decimal value of 1.0
   // Enqueue the write
   enqueue_transaction(1'b1, 1'b1, (ADDR_COEF_START + 6), tb_test_data, 1'b0, 1'b1);
   // Enqueue the 'check' read
-  enqueue_transaction(1'b1, 1'b0, (ADDR_COEF_START + 6), tb_test_data, 1'b0, 1'b1);
+  enqueue_transaction(1'b1, 1'b0, (ADDR_COEF_START + 6), 16'h8100, 1'b0, 1'b1);
   
   // Run the transactions via the model
   execute_transactions(2);
@@ -432,16 +432,34 @@ initial begin
   // Give some visual spacing between check and next test case start
   #(CLK_PERIOD * 3);
 
+/*****************************************************************************
+  // Test Case: Configure and check a Coefficient Value
+  //*****************************************************************************/
 
-  // Student TODO: Add more test cases here
-  // Update Navigation Info
-  tb_test_case     = "Need More Tests!";
+  tb_test_case     = "Load Consective F0 Coefficient Register";
   tb_test_case_num = tb_test_case_num + 1;
   init_fir_side();
   init_expected_outs();
 
   // Reset the DUT to isolate from prior test case
   reset_dut();
+
+  enqueue_transaction(1'b1, 1'b1, 3'd6, 16'd0150, 1'b0, 1'b1);
+  execute_transactions(1);
+
+  // Check the DUT outputs
+  tb_expected_data_ready    = 1'b0;
+  tb_expected_sample        = RESET_SAMPLE;
+  tb_expected_new_coeff_set = 1'b0;
+  tb_expected_coeff         = 16'd0150;
+  check_outputs("after attempting to configure F0");
+
+  // Give some visual spacing between check and next test case start
+  #(CLK_PERIOD * 3);
+
+  // check addr = 2
+
+  $stop;
 
 end
 

@@ -10,7 +10,7 @@ cModel Technology
 Z0 d/home/ecegrid/a/mg39/ece337/Lab8
 vapb_slave
 Z1 DXx6 sv_std 3 std 0 22 >9az<^>2ff9DAl3OFGaAf1
-!s110 1709764306
+!s110 1711397172
 !i10b 1
 !s100 B[acV7A0MXnEAfjWHceJC3
 I@1RczZC2k;g1c=z8BWH891
@@ -26,7 +26,7 @@ Z3 OE;L;10.7a;67
 r1
 !s85 0
 31
-!s108 1709764306.000000
+!s108 1711397172.000000
 !s107 /home/ecegrid/a/mg39/ece337/Lab8/source/apb_slave.sv|
 !s90 -nologo|-work|Source|/home/ecegrid/a/mg39/ece337/Lab8/source/apb_slave.sv|
 !i113 0
@@ -125,6 +125,54 @@ r1
 R11
 !s107 /home/ecegrid/a/mg39/ece337/Lab8/source/rcv_block.sv|
 !s90 -nologo|-work|Source|/home/ecegrid/a/mg39/ece337/Lab8/source/rcv_block.sv|
+!i113 0
+R4
+R5
+vtb_apb_slave
+R1
+!s110 1710630702
+!i10b 1
+!s100 EgjW38l1R6WI5@`6Az7VV2
+IbT=fYgnzWhNYgMBn1D5Nl2
+R2
+!s105 tb_apb_slave_sv_unit
+S1
+R0
+w1709603197
+8/home/ecegrid/a/mg39/ece337/Lab8/source/tb_apb_slave.sv
+F/home/ecegrid/a/mg39/ece337/Lab8/source/tb_apb_slave.sv
+L0 11
+R3
+r1
+!s85 0
+31
+!s108 1710630702.000000
+!s107 /home/ecegrid/a/mg39/ece337/Lab8/source/tb_apb_slave.sv|
+!s90 -nologo|-work|Source|/home/ecegrid/a/mg39/ece337/Lab8/source/tb_apb_slave.sv|
+!i113 0
+R4
+R5
+vtb_apb_uart_rx
+R1
+!s110 1710630079
+!i10b 1
+!s100 RVjVMWEmQc:661R_AFGkT0
+Ilm=T:0:dPUQ@<UB35QAkK3
+R2
+!s105 tb_apb_uart_rx_sv_unit
+S1
+R0
+w1709609448
+8/home/ecegrid/a/mg39/ece337/Lab8/source/tb_apb_uart_rx.sv
+F/home/ecegrid/a/mg39/ece337/Lab8/source/tb_apb_uart_rx.sv
+L0 9
+R3
+r1
+!s85 0
+31
+!s108 1710630079.000000
+!s107 /home/ecegrid/a/mg39/ece337/Lab8/source/tb_apb_uart_rx.sv|
+!s90 -nologo|-work|Source|/home/ecegrid/a/mg39/ece337/Lab8/source/tb_apb_uart_rx.sv|
 !i113 0
 R4
 R5
