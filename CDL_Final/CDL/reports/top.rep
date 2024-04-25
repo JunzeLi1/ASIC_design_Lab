@@ -1,0 +1,180 @@
+Information: Updating design information... (UID-85)
+Warning: Design 'top' contains 1 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : top
+Version: K-2015.06-SP1
+Date   : Wed Apr 24 18:52:28 2024
+****************************************
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: typical   Library: osu05_stdcells
+Wire Load Model Mode: top
+
+  Startpoint: TXDBUFF/write_ptr1_reg[1]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: TXDBUFF/mem_reg[0][2]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  TXDBUFF/write_ptr1_reg[1]/CLK (DFFSR)                   0.00 #     0.00 r
+  TXDBUFF/write_ptr1_reg[1]/Q (DFFSR)                     0.83       0.83 f
+  TXDBUFF/U2798/Y (INVX2)                                 0.43       1.26 r
+  TXDBUFF/U1849/Y (INVX2)                                 0.67       1.93 f
+  TXDBUFF/U4958/Y (OR2X1)                                 0.31       2.24 f
+  TXDBUFF/U4956/Y (AND2X1)                                0.36       2.61 f
+  TXDBUFF/U4954/Y (AND2X1)                                0.36       2.96 f
+  TXDBUFF/U4952/Y (AND2X1)                                0.36       3.32 f
+  TXDBUFF/U4951/Y (XOR2X1)                                0.23       3.56 r
+  TXDBUFF/U3532/Y (NOR2X1)                                0.34       3.90 f
+  TXDBUFF/U3531/Y (NAND3X1)                               0.55       4.45 r
+  TXDBUFF/U3526/Y (NOR2X1)                                1.01       5.46 f
+  TXDBUFF/U3507/Y (OR2X1)                                 0.20       5.66 f
+  TXDBUFF/U3506/Y (OAI21X1)                               0.18       5.85 r
+  TXDBUFF/U5017/Y (INVX2)                                 0.10       5.95 f
+  TXDBUFF/U3501/Y (OAI21X1)                               0.50       6.45 r
+  TXDBUFF/U3444/Y (AOI22X1)                               0.23       6.68 f
+  TXDBUFF/U3443/Y (OAI21X1)                               0.19       6.87 r
+  TXDBUFF/U3441/Y (AOI22X1)                               0.14       7.01 f
+  TXDBUFF/U3440/Y (OAI21X1)                               0.16       7.17 r
+  TXDBUFF/mem_reg[0][2]/D (DFFSR)                         0.00       7.17 r
+  data arrival time                                                  7.17
+
+  clock clk (rise edge)                                  10.00      10.00
+  clock network delay (ideal)                             0.00      10.00
+  TXDBUFF/mem_reg[0][2]/CLK (DFFSR)                       0.00      10.00 r
+  library setup time                                     -0.24       9.76
+  data required time                                                 9.76
+  --------------------------------------------------------------------------
+  data required time                                                 9.76
+  data arrival time                                                 -7.17
+  --------------------------------------------------------------------------
+  slack (MET)                                                        2.59
+
+
+1
+ 
+****************************************
+Report : area
+Design : top
+Version: K-2015.06-SP1
+Date   : Wed Apr 24 18:52:28 2024
+****************************************
+
+Library(s) Used:
+
+    osu05_stdcells (File: /package/eda/cells/OSU/v2.7/synopsys/lib/ami05/osu05_stdcells.db)
+
+Number of ports:                          830
+Number of nets:                         21144
+Number of cells:                        20383
+Number of combinational cells:          13897
+Number of sequential cells:              6452
+Number of macros/black boxes:               0
+Number of buf/inv:                       2805
+Number of references:                       5
+
+Combinational area:            3322566.000000
+Buf/Inv area:                   499104.000000
+Noncombinational area:         5102784.000000
+Macro/Black Box area:                0.000000
+Net Interconnect area:      undefined  (No wire load specified)
+
+Total cell area:               8425350.000000
+Total area:                 undefined
+1
+Loading db file '/package/eda/cells/OSU/v2.7/synopsys/lib/ami05/osu05_stdcells.db'
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+Warning: Design has unannotated primary inputs. (PWR-414)
+Warning: Design has unannotated sequential cell outputs. (PWR-415)
+ 
+****************************************
+Report : power
+        -hier
+        -analysis_effort low
+Design : top
+Version: K-2015.06-SP1
+Date   : Wed Apr 24 18:52:29 2024
+****************************************
+
+
+Library(s) Used:
+
+    osu05_stdcells (File: /package/eda/cells/OSU/v2.7/synopsys/lib/ami05/osu05_stdcells.db)
+
+
+Operating Conditions: typical   Library: osu05_stdcells
+Wire Load Model Mode: top
+
+
+Global Operating Voltage = 5    
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 1.000000pf
+    Time Units = 1ns
+    Dynamic Power Units = 1mW    (derived from V,C,T units)
+    Leakage Power Units = 1nW
+
+
+--------------------------------------------------------------------------------
+                                       Switch   Int      Leak     Total
+Hierarchy                              Power    Power    Power    Power    %
+--------------------------------------------------------------------------------
+top                                      32.186  670.170 2.69e+03  702.359 100.0
+  RXDBUFF (data_buffer_rx)               19.436  433.084 1.64e+03  452.522  64.4
+    add_84 (data_buffer_rx_DW01_inc_1)    0.000    0.000    1.541 1.54e-06   0.0
+    sub_120 (data_buffer_rx_DW01_sub_0)
+                                          0.000    0.000    2.291 2.29e-06   0.0
+  TXDBUFF (data_buffer_tx)                8.914  191.641  832.129  200.556  28.6
+    add_119 (data_buffer_tx_DW01_inc_1)
+                                          0.000    0.000    1.541 1.54e-06   0.0
+    sub_166 (data_buffer_tx_DW01_sub_0)
+                                          0.000    0.000    2.291 2.29e-06   0.0
+  TX (usb_tx)                             0.245   11.934   72.255   12.178   1.7
+    ENCODER_TX (encoder)                  0.000    1.024    3.832    1.024   0.1
+    SHIFT_REG (shift_register_tx)         0.103    3.921   17.516    4.024   0.6
+      r303 (shift_register_tx_DW01_inc_0)
+                                          0.000    0.000    1.541 1.54e-06   0.0
+      SR8 (flex_pts_sr_NUM_BITS8_SHIFT_MSB0)
+                                       5.73e-04    1.659    5.933    1.660   0.2
+    TIMER4 (timer4_tx)                 4.18e-02    1.443    9.625    1.484   0.2
+      CNT1 (flex_counter_NUM_CNT_BITS6_0)
+                                       4.18e-02    1.443    9.594    1.484   0.2
+    TIMER3 (timer3_tx)                 4.18e-02    1.443    9.757    1.484   0.2
+      CNT1 (flex_counter_NUM_CNT_BITS6_1)
+                                       4.18e-02    1.443    9.594    1.484   0.2
+    TIMER2 (timer2_tx)                    0.000    1.024    6.423    1.024   0.1
+      CNT1 (flex_counter_NUM_CNT_BITS4_0)
+                                          0.000    1.024    6.392    1.024   0.1
+    TIMER (timer_tx)                   5.79e-02    2.057   12.877    2.115   0.3
+      CNT2 (flex_counter_NUM_CNT_BITS4_1)
+                                          0.000    1.024    6.392    1.024   0.1
+      CNT1 (flex_counter_NUM_CNT_BITS4_2)
+                                          0.000    1.024    6.392    1.024   0.1
+    CONTROLLER (controller_tx)            0.000    1.024   12.225    1.024   0.1
+  RX (usb_receiver)                       0.987   16.317   66.765   17.304   2.5
+    data_buffer (rx_data_buffer)          0.117    7.175   24.322    7.292   1.0
+    controller (rcu)                      0.344    3.145   21.482    3.489   0.5
+    shift_reg (shift_register)         6.35e-02    1.701    5.349    1.764   0.3
+      sr0 (flex_stp_sr_NUM_BITS8_SHIFT_MSB0)
+                                       6.35e-02    1.701    5.349    1.764   0.3
+    time_block (timer)                    0.401    2.642   11.393    3.043   0.4
+      bit_counter (flex_counter_NUM_CNT_BITS4_3)
+                                       5.78e-02    1.108    6.392    1.166   0.2
+    decode (decoder)                   1.58e-02    0.466    1.421    0.482   0.1
+    edge_detc (edge_detector)          2.03e-02    0.242    0.615    0.263   0.0
+    eop_detc (eop_detector)            1.09e-02 3.48e-03 5.10e-02 1.44e-02   0.0
+    low_synchonizer (sync_low)         4.75e-03    0.469    1.066    0.473   0.1
+    high_synchonizer (sync_high)       1.08e-02    0.473    1.066    0.484   0.1
+  BUS (ahb_lite_slave)                    2.603   17.187   72.145   19.790   2.8
+1

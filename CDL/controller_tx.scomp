@@ -1,0 +1,9 @@
+QuestaSim vlog 10.7a Compiler 2018.03 Mar 26 2018
+Start time: 20:14:05 on Apr 23,2024
+vlog -sv -work source_work source/controller_tx.sv 
+-- Compiling module controller_tx
+
+Top level modules:
+	controller_tx
+End time: 20:14:05 on Apr 23,2024, Elapsed time: 0:00:00
+Errors: 0, Warnings: 0

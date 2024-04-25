@@ -1,0 +1,9 @@
+QuestaSim vlog 10.7a Compiler 2018.03 Mar 26 2018
+Start time: 18:24:53 on Apr 24,2024
+vlog -sv -work source_work source/data_buffer_tx.sv 
+-- Compiling module data_buffer_tx
+
+Top level modules:
+	data_buffer_tx
+End time: 18:24:53 on Apr 24,2024, Elapsed time: 0:00:00
+Errors: 0, Warnings: 0

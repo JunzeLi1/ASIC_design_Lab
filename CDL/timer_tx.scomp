@@ -1,0 +1,9 @@
+QuestaSim vlog 10.7a Compiler 2018.03 Mar 26 2018
+Start time: 11:09:19 on Apr 23,2024
+vlog -sv -work source_work source/timer_tx.sv 
+-- Compiling module timer_tx
+
+Top level modules:
+	timer_tx
+End time: 11:09:19 on Apr 23,2024, Elapsed time: 0:00:00
+Errors: 0, Warnings: 0

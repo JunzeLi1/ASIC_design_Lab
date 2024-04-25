@@ -1,0 +1,762 @@
+Synthesizing design: top.sv
+dc_shell-t -x "source -echo do_mapping.tcl"
+                                        
+                           Design Compiler Graphical 
+                                 DC Ultra (TM)
+                                  DFTMAX (TM)
+                              Power Compiler (TM)
+                                 DesignWare (R)
+                                 DC Expert (TM)
+                               Design Vision (TM)
+                               HDL Compiler (TM)
+                               VHDL Compiler (TM)
+                                  DFT Compiler
+                               Design Compiler(R)
+                                        
+               Version K-2015.06-SP1 for linux64 - Jul 21, 2015 
+                                        
+                    Copyright (c) 1988 - 2015 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+            or distribution of this software is strictly prohibited.
+Initializing...
+Initializing gui preferences from file  /home/ecegrid/a/mg39/.synopsys_dv_prefs.tcl
+# Step 1:  Read in the source file
+analyze -format sverilog -lib WORK {usb_tx_data_buffer.sv data_buffer_rx.sv usb_tx.sv ahb_lite_slave.sv controller_tx.sv data_buffer_tx.sv timer_tx.sv timer2_tx.sv timer3_tx.sv timer4_tx.sv flex_counter.sv shift_register_tx.sv flex_pts_sr.sv encoder.sv decoder.sv edge_detector.sv eop_detector.sv flex_stp_sr.sv rcu.sv rx_data_buffer.sv shift_register.sv sync_high.sv sync_low.sv timer.sv usb_receiver.sv top.sv}
+Running PRESTO HDLC
+Compiling source file ./source/usb_tx_data_buffer.sv
+Compiling source file ./source/data_buffer_rx.sv
+Compiling source file ./source/usb_tx.sv
+Compiling source file ./source/ahb_lite_slave.sv
+Compiling source file ./source/controller_tx.sv
+Compiling source file ./source/data_buffer_tx.sv
+Compiling source file ./source/timer_tx.sv
+Compiling source file ./source/timer2_tx.sv
+Compiling source file ./source/timer3_tx.sv
+Compiling source file ./source/timer4_tx.sv
+Compiling source file ./source/flex_counter.sv
+Compiling source file ./source/shift_register_tx.sv
+Compiling source file ./source/flex_pts_sr.sv
+Compiling source file ./source/encoder.sv
+Compiling source file ./source/decoder.sv
+Compiling source file ./source/edge_detector.sv
+Compiling source file ./source/eop_detector.sv
+Compiling source file ./source/flex_stp_sr.sv
+Compiling source file ./source/rcu.sv
+Compiling source file ./source/rx_data_buffer.sv
+Compiling source file ./source/shift_register.sv
+Compiling source file ./source/sync_high.sv
+Compiling source file ./source/sync_low.sv
+Compiling source file ./source/timer.sv
+Compiling source file ./source/usb_receiver.sv
+Warning:  ./source/usb_receiver.sv:34: the undeclared symbol 'buff_clear' assumed to have the default net type, which is 'wire'. (VER-936)
+Compiling source file ./source/top.sv
+Presto compilation completed successfully.
+Loading db file '/package/eda/cells/OSU/v2.7/synopsys/lib/ami05/osu05_stdcells.db'
+Loading db file '/package/eda/synopsys/syn-K-2015.06-SP1/libraries/syn/dw_foundation.sldb'
+elaborate top -lib WORK
+Loading db file '/package/eda/synopsys/syn-K-2015.06-SP1/libraries/syn/gtech.db'
+Loading db file '/package/eda/synopsys/syn-K-2015.06-SP1/libraries/syn/standard.sldb'
+  Loading link library 'osu05_stdcells'
+  Loading link library 'gtech'
+Running PRESTO HDLC
+Presto compilation completed successfully.
+Elaborated 1 design.
+Current design is now 'top'.
+Information: Building the design 'ahb_lite_slave'. (HDL-193)
+
+Statistics for case statements in always block at line 166 in file
+	'./source/ahb_lite_slave.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           190            |     no/auto      |
+|           201            |     no/auto      |
+|           230            |     no/auto      |
+|           257            |     no/auto      |
+|           294            |     no/auto      |
+|           314            |     no/auto      |
+|           334            |     no/auto      |
+|           357            |     no/auto      |
+|           377            |     no/auto      |
+|           397            |     no/auto      |
+===============================================
+
+Inferred memory devices in process
+	in routine ahb_lite_slave line 87 in file
+		'./source/ahb_lite_slave.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     tx_data_reg     | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+|    reg_hsel_reg     | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|   reg_hwrite_reg    | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|    reg_hsize_reg    | Flip-flop |   2   |  Y  | N  | Y  | N  | N  | N  | N  |
+|    reg_haddr_reg    | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+|     hrdata_reg      | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|    tx_packet_reg    | Flip-flop |   3   |  Y  | N  | Y  | N  | N  | N  | N  |
+|   get_rx_data_reg   | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|  store_tx_data_reg  | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|      clear_reg      | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|     d_mode_reg      | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|    hsize_out_reg    | Flip-flop |   2   |  Y  | N  | Y  | N  | N  | N  | N  |
+|     hsize_1_reg     | Flip-flop |   2   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'usb_receiver'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'usb_tx'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'data_buffer_tx'. (HDL-193)
+
+Statistics for case statements in always block at line 57 in file
+	'./source/data_buffer_tx.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            72            |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 108 in file
+	'./source/data_buffer_tx.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           117            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine data_buffer_tx line 31 in file
+		'./source/data_buffer_tx.sv'.
+=================================================================================
+|     Register Name     |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+=================================================================================
+| buffer_occupancy1_reg | Flip-flop |   6   |  Y  | N  | Y  | N  | N  | N  | N  |
+|     read_ptr_reg      | Flip-flop |   6   |  Y  | N  | Y  | N  | N  | N  | N  |
+|    write_ptr1_reg     | Flip-flop |   7   |  Y  | N  | Y  | N  | N  | N  | N  |
+|  tx_packet_data_reg   | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+=================================================================================
+
+Inferred memory devices in process
+	in routine data_buffer_tx line 57 in file
+		'./source/data_buffer_tx.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|       mem_reg       | Flip-flop |  504  |  Y  | N  | Y  | N  | N  | N  | N  |
+|    data_out_reg     | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine data_buffer_tx line 169 in file
+		'./source/data_buffer_tx.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    shift_reg_reg    | Flip-flop |  378  |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine data_buffer_tx line 185 in file
+		'./source/data_buffer_tx.sv'.
+================================================================================
+|    Register Name     |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+================================================================================
+| buffer_occupancy_reg | Flip-flop |   6   |  Y  | N  | Y  | N  | N  | N  | N  |
+================================================================================
+Statistics for MUX_OPs
+============================================================
+| block name/line   | Inputs | Outputs | # sel inputs | MB |
+============================================================
+| data_buffer_tx/91 |   64   |    8    |      6       | N  |
+============================================================
+Presto compilation completed successfully.
+Information: Building the design 'data_buffer_rx'. (HDL-193)
+
+Inferred memory devices in process
+	in routine data_buffer_rx line 27 in file
+		'./source/data_buffer_rx.sv'.
+===================================================================================
+|      Register Name      |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===================================================================================
+| buffer_occupancy_rx_reg | Flip-flop |   6   |  Y  | N  | Y  | N  | N  | N  | N  |
+|      read_ptr_reg       | Flip-flop |   6   |  Y  | N  | Y  | N  | N  | N  | N  |
+|      write_ptr_reg      | Flip-flop |   7   |  Y  | N  | Y  | N  | N  | N  | N  |
+|       rx_data_reg       | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+===================================================================================
+
+Inferred memory devices in process
+	in routine data_buffer_rx line 42 in file
+		'./source/data_buffer_rx.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|       mem_reg       | Flip-flop | 2016  |  Y  | N  | Y  | N  | N  | N  | N  |
+|    data_out_reg     | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Statistics for MUX_OPs
+============================================================
+| block name/line   | Inputs | Outputs | # sel inputs | MB |
+============================================================
+| data_buffer_rx/58 |   64   |   32    |      6       | N  |
+============================================================
+Presto compilation completed successfully.
+Information: Building the design 'sync_high'. (HDL-193)
+
+Inferred memory devices in process
+	in routine sync_high line 15 in file
+		'./source/sync_high.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      temp_reg       | Flip-flop |   1   |  N  | N  | N  | Y  | N  | N  | N  |
+|    sync_out_reg     | Flip-flop |   1   |  N  | N  | N  | Y  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'sync_low'. (HDL-193)
+
+Inferred memory devices in process
+	in routine sync_low line 15 in file
+		'./source/sync_low.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      temp_reg       | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|    sync_out_reg     | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'eop_detector'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'edge_detector'. (HDL-193)
+
+Inferred memory devices in process
+	in routine edge_detector line 17 in file
+		'./source/edge_detector.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     dp_temp_reg     | Flip-flop |   1   |  N  | N  | N  | Y  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'decoder'. (HDL-193)
+
+Inferred memory devices in process
+	in routine decoder line 18 in file
+		'./source/decoder.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    temp_end_reg     | Flip-flop |   1   |  N  | N  | N  | Y  | N  | N  | N  |
+|    temp_mid_reg     | Flip-flop |   1   |  N  | N  | N  | Y  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'timer'. (HDL-193)
+
+Inferred memory devices in process
+	in routine timer line 17 in file
+		'./source/timer.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|  shift_enable_reg   | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|      count_reg      | Flip-flop |   2   |  Y  | N  | Y  | N  | N  | N  | N  |
+|      count_reg      | Flip-flop |   2   |  Y  | N  | N  | Y  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'shift_register'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'rcu'. (HDL-193)
+
+Statistics for case statements in always block at line 49 in file
+	'./source/rcu.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            51            |     no/auto      |
+===============================================
+
+Statistics for case statements in always block at line 113 in file
+	'./source/rcu.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           122            |     no/auto      |
+|           150            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine rcu line 25 in file
+		'./source/rcu.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|       pid_reg       | Flip-flop |   3   |  Y  | N  | Y  | N  | N  | N  | N  |
+|      state_reg      | Flip-flop |   5   |  Y  | N  | Y  | N  | N  | N  | N  |
+|    w_enable_reg     | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|     r_error_reg     | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|      flush_reg      | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|     data_en_reg     | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|   buff_clear_reg    | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|   data_ready_reg    | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'rx_data_buffer'. (HDL-193)
+
+Inferred memory devices in process
+	in routine rx_data_buffer line 20 in file
+		'./source/rx_data_buffer.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      count_reg      | Flip-flop |   3   |  Y  | N  | Y  | N  | N  | N  | N  |
+|    rcv_data_reg     | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'controller_tx'. (HDL-193)
+
+Statistics for case statements in always block at line 33 in file
+	'./source/controller_tx.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            46            |     no/auto      |
+===============================================
+
+Inferred memory devices in process
+	in routine controller_tx line 24 in file
+		'./source/controller_tx.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|   curr_state_reg    | Flip-flop |   5   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'timer_tx'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'timer2_tx'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'timer3_tx'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'timer4_tx'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'shift_register_tx'. (HDL-193)
+
+Statistics for case statements in always block at line 20 in file
+	'./source/shift_register_tx.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            21            |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 60 in file
+	'./source/shift_register_tx.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            61            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine shift_register_tx line 39 in file
+		'./source/shift_register_tx.sv'.
+==================================================================================
+|     Register Name      |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+==================================================================================
+| tx_packet_out_held_reg | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+|      counter_reg       | Flip-flop |   7   |  Y  | N  | Y  | N  | N  | N  | N  |
+==================================================================================
+Presto compilation completed successfully.
+Information: Building the design 'encoder'. (HDL-193)
+
+Statistics for case statements in always block at line 61 in file
+	'./source/encoder.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            65            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine encoder line 32 in file
+		'./source/encoder.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|   enable_pts1_reg   | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|   clk12_sync1_reg   | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine encoder line 43 in file
+		'./source/encoder.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|   clk12_sync_reg    | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine encoder line 52 in file
+		'./source/encoder.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|   curr_state_reg    | Flip-flop |   2   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'flex_counter' instantiated from design 'timer' with
+	the parameters "NUM_CNT_BITS=4". (HDL-193)
+
+Inferred memory devices in process
+	in routine flex_counter_NUM_CNT_BITS4 line 22 in file
+		'./source/flex_counter.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|  rollover_flag_reg  | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|    count_out_reg    | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'flex_stp_sr' instantiated from design 'shift_register' with
+	the parameters "NUM_BITS=8,SHIFT_MSB=0". (HDL-193)
+
+Inferred memory devices in process
+	in routine flex_stp_sr_NUM_BITS8_SHIFT_MSB0 line 19 in file
+		'./source/flex_stp_sr.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|  parallel_out_reg   | Flip-flop |   8   |  Y  | N  | N  | Y  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'flex_counter' instantiated from design 'timer3_tx' with
+	the parameters "NUM_CNT_BITS=6". (HDL-193)
+
+Inferred memory devices in process
+	in routine flex_counter_NUM_CNT_BITS6 line 22 in file
+		'./source/flex_counter.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|  rollover_flag_reg  | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|    count_out_reg    | Flip-flop |   6   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'flex_pts_sr' instantiated from design 'shift_register_tx' with
+	the parameters "NUM_BITS=8,SHIFT_MSB=0". (HDL-193)
+
+Inferred memory devices in process
+	in routine flex_pts_sr_NUM_BITS8_SHIFT_MSB0 line 21 in file
+		'./source/flex_pts_sr.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|  parallel_out_reg   | Flip-flop |   8   |  Y  | N  | N  | Y  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+uniquify
+Information: Uniquified 4 instances of design 'flex_counter_NUM_CNT_BITS4'. (OPT-1056)
+Information: Uniquified 2 instances of design 'flex_counter_NUM_CNT_BITS6'. (OPT-1056)
+# Step 2: Set design constraints
+# Uncomment below to set timing, area, power, etc. constraints
+# set_max_delay <delay> -from "<input>" -to "<output>"
+# set_max_area <area>
+# set_max_total_power <power> mW
+create_clock "clk" -name "clk" -period 10
+# Step 3: Compile the design
+compile -map_effort medium
+Information: Checking out the license 'DesignWare'. (SEC-104)
+Information: Evaluating DesignWare library utilization. (UISN-27)
+
+============================================================================
+| DesignWare Building Block Library  |         Version         | Available |
+============================================================================
+| Basic DW Building Blocks           | K-2015.06-DWBB_201506.1 |     *     |
+| Licensed DW Building Blocks        | K-2015.06-DWBB_201506.1 |     *     |
+============================================================================
+
+
+Information: There are 93 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+
+
+
+  Beginning Pass 1 Mapping
+  ------------------------
+  Processing 'data_buffer_rx'
+  Processing 'data_buffer_tx'
+  Processing 'encoder'
+  Processing 'flex_pts_sr_NUM_BITS8_SHIFT_MSB0'
+  Processing 'shift_register_tx'
+  Processing 'flex_counter_NUM_CNT_BITS6_0'
+Information: Added key list 'DesignWare' to design 'flex_counter_NUM_CNT_BITS6_0'. (DDB-72)
+  Processing 'timer4_tx'
+  Processing 'timer3_tx'
+  Processing 'flex_counter_NUM_CNT_BITS4_0'
+Information: Added key list 'DesignWare' to design 'flex_counter_NUM_CNT_BITS4_0'. (DDB-72)
+  Processing 'timer2_tx'
+  Processing 'timer_tx'
+  Processing 'controller_tx'
+  Processing 'usb_tx'
+  Processing 'rx_data_buffer'
+  Processing 'rcu'
+  Processing 'flex_stp_sr_NUM_BITS8_SHIFT_MSB0'
+  Processing 'shift_register'
+  Processing 'timer'
+  Processing 'decoder'
+  Processing 'edge_detector'
+  Processing 'eop_detector'
+  Processing 'sync_low'
+  Processing 'sync_high'
+  Processing 'usb_receiver'
+  Processing 'ahb_lite_slave'
+Information: Added key list 'DesignWare' to design 'ahb_lite_slave'. (DDB-72)
+Information: The register 'd_mode_reg' is a constant and will be removed. (OPT-1206)
+  Processing 'top'
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+
+  Beginning Implementation Selection
+  ----------------------------------
+  Processing 'data_buffer_rx_DW01_sub_0'
+  Processing 'data_buffer_rx_DW01_inc_0'
+  Processing 'data_buffer_rx_DW01_inc_1'
+  Processing 'data_buffer_tx_DW01_sub_0'
+  Processing 'data_buffer_tx_DW01_inc_0'
+  Processing 'data_buffer_tx_DW01_add_0'
+  Processing 'data_buffer_tx_DW01_add_1'
+  Processing 'data_buffer_tx_DW01_inc_1'
+  Processing 'data_buffer_tx_DW01_add_2'
+  Processing 'data_buffer_tx_DW01_add_3'
+  Processing 'data_buffer_tx_DW01_inc_2'
+  Processing 'shift_register_tx_DW01_inc_0'
+  Mapping 'shift_register_tx_DW_cmp_0'
+  Mapping 'shift_register_tx_DW_cmp_1'
+  Processing 'DW01_inc_width4'
+  Mapping 'timer_DW_mult_uns_0'
+  Processing 'flex_counter_NUM_CNT_BITS6_0_DW01_inc_0'
+  Mapping 'flex_counter_NUM_CNT_BITS6_0_DW_mult_uns_0'
+  Processing 'DW01_inc_width4'
+  Mapping 'flex_counter_NUM_CNT_BITS4_0_DW_mult_uns_0'
+  Processing 'DW01_inc_width4'
+  Mapping 'flex_counter_NUM_CNT_BITS4_1_DW_mult_uns_0'
+  Processing 'DW01_inc_width4'
+  Mapping 'flex_counter_NUM_CNT_BITS4_2_DW_mult_uns_0'
+  Processing 'DW01_inc_width4'
+  Mapping 'flex_counter_NUM_CNT_BITS4_3_DW_mult_uns_0'
+  Processing 'flex_counter_NUM_CNT_BITS6_1_DW01_inc_0'
+  Mapping 'flex_counter_NUM_CNT_BITS6_1_DW_mult_uns_0'
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:10 8120925.0     12.18    1864.1     238.2                          
+    0:00:10 8120925.0     12.18    1864.1     238.2                          
+    0:00:10 8121789.0     12.18    1864.1     238.1                          
+
+  Beginning Mapping Optimizations  (Medium effort)
+  -------------------------------
+Information: Added key list 'DesignWare' to design 'shift_register_tx'. (DDB-72)
+Information: Added key list 'DesignWare' to design 'timer'. (DDB-72)
+  Mapping Optimization (Phase 1)
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:14 8663742.0      0.00       0.0       0.0                          
+    0:00:14 8663742.0      0.00       0.0       0.0                          
+    0:00:14 8663742.0      0.00       0.0       0.0                          
+    0:00:14 8663742.0      0.00       0.0       0.0                          
+    0:00:14 8663742.0      0.00       0.0       0.0                          
+    0:00:14 8467542.0      0.00       0.0       0.0                          
+    0:00:15 8467470.0      0.00       0.0       0.0                          
+    0:00:15 8467470.0      0.00       0.0       0.0                          
+    0:00:15 8467470.0      0.00       0.0       0.0                          
+    0:00:15 8467470.0      0.00       0.0       0.0                          
+    0:00:15 8467470.0      0.00       0.0       0.0                          
+    0:00:15 8467470.0      0.00       0.0       0.0                          
+    0:00:15 8467470.0      0.00       0.0       0.0                          
+    0:00:15 8467470.0      0.00       0.0       0.0                          
+    0:00:15 8467470.0      0.00       0.0       0.0                          
+
+
+
+  Beginning Delay Optimization Phase
+  ----------------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:15 8467470.0      0.00       0.0       0.0                          
+    0:00:15 8467470.0      0.00       0.0       0.0                          
+    0:00:15 8467470.0      0.00       0.0       0.0                          
+
+
+  Beginning Area-Recovery Phase  (cleanup)
+  -----------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:15 8467470.0      0.00       0.0       0.0                          
+    0:00:15 8467470.0      0.00       0.0       0.0                          
+    0:00:17 8441406.0      0.00       0.0       0.0                          
+    0:00:18 8433918.0      0.00       0.0       0.0                          
+    0:00:18 8430534.0      0.00       0.0       0.0                          
+    0:00:18 8427726.0      0.00       0.0       0.0                          
+    0:00:18 8425350.0      0.00       0.0       0.0                          
+    0:00:18 8425350.0      0.00       0.0       0.0                          
+    0:00:18 8425350.0      0.00       0.0       0.0                          
+    0:00:18 8425350.0      0.00       0.0       0.0                          
+    0:00:18 8425350.0      0.00       0.0       0.0                          
+    0:00:18 8425350.0      0.00       0.0       0.0                          
+    0:00:18 8425350.0      0.00       0.0       0.0                          
+    0:00:18 8425350.0      0.00       0.0       0.0                          
+    0:00:18 8425350.0      0.00       0.0       0.0                          
+Loading db file '/package/eda/cells/OSU/v2.7/synopsys/lib/ami05/osu05_stdcells.db'
+
+
+Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios 
+
+
+  Optimization Complete
+  ---------------------
+Warning: Design 'top' contains 1 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+     Net 'TX/TIMER4/CNT1/clk': 3236 load(s), 1 driver(s)
+# Step 4: Output reports
+report_timing -path full -delay max -max_paths 1 -nworst 1 > reports/top.rep
+report_area >> reports/top.rep
+report_power -hier >> reports/top.rep
+# Step 5: Output final VHDL and Verilog files
+write_file -format verilog -hierarchy -output "mapped/top.v"
+Writing verilog file '/home/ecegrid/a/mg39/ece337/CDL_Final/CDL/mapped/top.v'.
+Warning: Verilog 'assign' or 'tran' statements are written out. (VO-4)
+echo "\nScript Done\n"
+
+Script Done
+
+echo "\nChecking Design\n"
+
+Checking Design
+
+check_design
+ 
+****************************************
+check_design summary:
+Version:     K-2015.06-SP1
+Date:        Wed Apr 24 18:52:30 2024
+****************************************
+
+                   Name                                            Total
+--------------------------------------------------------------------------------
+Inputs/Outputs                                                     17
+    Unconnected ports (LINT-28)                                    15
+    Shorted outputs (LINT-31)                                       1
+    Constant outputs (LINT-52)                                      1
+
+Cells                                                              36
+    Connected to power or ground (LINT-32)                         26
+    Nets connected to multiple pins on same cell (LINT-33)         10
+--------------------------------------------------------------------------------
+
+Warning: In design 'top', port 'd_mode' is not connected to any nets. (LINT-28)
+Warning: In design 'ahb_lite_slave', port 'htrans[1]' is not connected to any nets. (LINT-28)
+Warning: In design 'ahb_lite_slave', port 'htrans[0]' is not connected to any nets. (LINT-28)
+Warning: In design 'eop_detector', port 'clk' is not connected to any nets. (LINT-28)
+Warning: In design 'eop_detector', port 'n_rst' is not connected to any nets. (LINT-28)
+Warning: In design 'rcu', port 'buffer_occupancy[5]' is not connected to any nets. (LINT-28)
+Warning: In design 'rcu', port 'buffer_occupancy[4]' is not connected to any nets. (LINT-28)
+Warning: In design 'rcu', port 'buffer_occupancy[3]' is not connected to any nets. (LINT-28)
+Warning: In design 'rcu', port 'buffer_occupancy[2]' is not connected to any nets. (LINT-28)
+Warning: In design 'rcu', port 'buffer_occupancy[1]' is not connected to any nets. (LINT-28)
+Warning: In design 'rcu', port 'buffer_occupancy[0]' is not connected to any nets. (LINT-28)
+Warning: In design 'data_buffer_rx_DW01_sub_0', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'data_buffer_rx_DW01_sub_0', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'data_buffer_tx_DW01_sub_0', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'data_buffer_tx_DW01_sub_0', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'controller_tx', output port 'enable_timer_bits52' is connected directly to output port 'enable_timer_bits51'. (LINT-31)
+Warning: In design 'data_buffer_tx', a pin on submodule 'sub_166' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'CI' is connected to logic 0. 
+Warning: In design 'data_buffer_rx', a pin on submodule 'sub_120' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'CI' is connected to logic 0. 
+Warning: In design 'timer', a pin on submodule 'bit_counter' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'rollover_val[3]' is connected to logic 1. 
+Warning: In design 'timer', a pin on submodule 'bit_counter' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'rollover_val[2]' is connected to logic 0. 
+Warning: In design 'timer', a pin on submodule 'bit_counter' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'rollover_val[1]' is connected to logic 0. 
+Warning: In design 'timer', a pin on submodule 'bit_counter' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'rollover_val[0]' is connected to logic 0. 
+Warning: In design 'timer_tx', a pin on submodule 'CNT1' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'rollover_val[3]' is connected to logic 1. 
+Warning: In design 'timer_tx', a pin on submodule 'CNT1' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'rollover_val[2]' is connected to logic 0. 
+Warning: In design 'timer_tx', a pin on submodule 'CNT1' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'rollover_val[1]' is connected to logic 0. 
+Warning: In design 'timer_tx', a pin on submodule 'CNT1' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'rollover_val[0]' is connected to logic 0. 
+Warning: In design 'timer_tx', a pin on submodule 'CNT2' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'rollover_val[3]' is connected to logic 1. 
+Warning: In design 'timer_tx', a pin on submodule 'CNT2' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'rollover_val[2]' is connected to logic 0. 
+Warning: In design 'timer_tx', a pin on submodule 'CNT2' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'rollover_val[1]' is connected to logic 0. 
+Warning: In design 'timer_tx', a pin on submodule 'CNT2' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'rollover_val[0]' is connected to logic 0. 
+Warning: In design 'timer2_tx', a pin on submodule 'CNT1' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'rollover_val[3]' is connected to logic 1. 
+Warning: In design 'timer2_tx', a pin on submodule 'CNT1' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'rollover_val[2]' is connected to logic 0. 
+Warning: In design 'timer2_tx', a pin on submodule 'CNT1' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'rollover_val[1]' is connected to logic 0. 
+Warning: In design 'timer2_tx', a pin on submodule 'CNT1' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'rollover_val[0]' is connected to logic 1. 
+Warning: In design 'timer3_tx', a pin on submodule 'CNT1' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'rollover_val[3]' is connected to logic 0. 
+Warning: In design 'timer3_tx', a pin on submodule 'CNT1' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'rollover_val[0]' is connected to logic 0. 
+Warning: In design 'timer4_tx', a pin on submodule 'CNT1' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'rollover_val[5]' is connected to logic 1. 
+Warning: In design 'timer4_tx', a pin on submodule 'CNT1' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'rollover_val[4]' is connected to logic 1. 
+Warning: In design 'timer4_tx', a pin on submodule 'CNT1' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'rollover_val[3]' is connected to logic 0. 
+Warning: In design 'timer4_tx', a pin on submodule 'CNT1' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'rollover_val[2]' is connected to logic 0. 
+Warning: In design 'timer4_tx', a pin on submodule 'CNT1' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'rollover_val[1]' is connected to logic 1. 
+Warning: In design 'timer4_tx', a pin on submodule 'CNT1' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'rollover_val[0]' is connected to logic 1. 
+Warning: In design 'timer', the same net is connected to more than one pin on submodule 'bit_counter'. (LINT-33)
+   Net 'byte_received' is connected to pins 'clear', 'rollover_flag''.
+Warning: In design 'timer', the same net is connected to more than one pin on submodule 'bit_counter'. (LINT-33)
+   Net '*Logic0*' is connected to pins 'rollover_val[2]', 'rollover_val[1]'', 'rollover_val[0]'.
+Warning: In design 'timer_tx', the same net is connected to more than one pin on submodule 'CNT1'. (LINT-33)
+   Net '*Logic0*' is connected to pins 'rollover_val[2]', 'rollover_val[1]'', 'rollover_val[0]'.
+Warning: In design 'timer_tx', the same net is connected to more than one pin on submodule 'CNT2'. (LINT-33)
+   Net '*Logic0*' is connected to pins 'rollover_val[2]', 'rollover_val[1]'', 'rollover_val[0]'.
+Warning: In design 'timer2_tx', the same net is connected to more than one pin on submodule 'CNT1'. (LINT-33)
+   Net '*Logic1*' is connected to pins 'rollover_val[3]', 'rollover_val[0]''.
+Warning: In design 'timer2_tx', the same net is connected to more than one pin on submodule 'CNT1'. (LINT-33)
+   Net '*Logic0*' is connected to pins 'rollover_val[2]', 'rollover_val[1]''.
+Warning: In design 'timer3_tx', the same net is connected to more than one pin on submodule 'CNT1'. (LINT-33)
+   Net 'n1' is connected to pins 'count_enable', 'rollover_val[5]'', 'rollover_val[4]', 'rollover_val[2]'.
+Warning: In design 'timer3_tx', the same net is connected to more than one pin on submodule 'CNT1'. (LINT-33)
+   Net '*Logic0*' is connected to pins 'rollover_val[3]', 'rollover_val[0]''.
+Warning: In design 'timer4_tx', the same net is connected to more than one pin on submodule 'CNT1'. (LINT-33)
+   Net '*Logic1*' is connected to pins 'rollover_val[5]', 'rollover_val[4]'', 'rollover_val[1]', 'rollover_val[0]'.
+Warning: In design 'timer4_tx', the same net is connected to more than one pin on submodule 'CNT1'. (LINT-33)
+   Net '*Logic0*' is connected to pins 'rollover_val[3]', 'rollover_val[2]''.
+Warning: In design 'ahb_lite_slave', output port 'd_mode' is connected directly to 'logic 0'. (LINT-52)
+quit
+
+Thank you...
+Done
+
+

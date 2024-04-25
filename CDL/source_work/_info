@@ -1,0 +1,365 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/ecegrid/a/mg39/ece337/CDL
+T_opt
+!s110 1713901277
+VK?RI8^5<D<zJN=U_]G:3a2
+Z1 04 21 4 work tb_usb_tx_data_buffer fast 0
+=1-ec2a720a9f52-66280edd-6b16e-166d9
+Z2 o-quiet -auto_acc_if_foreign -work source_work -L /home/ecegrid/a/ece337/Course_Prod/Cell_Libs/AMI_05/vhdl_work -L /home/ecegrid/a/ece337/Class0.5u/GOLD_LIB -Lf /home/ecegrid/a/ece337/Course_Prod/IP_Libs/Lab_IP_Lib/Vsim -suppress 12110 +acc
+Z3 tCvgOpt 0
+n@_opt
+Z4 OE;O;10.7a;67
+R0
+T_opt1
+!s110 1713918949
+Vzz>PZSHUQ9iNJaf3mD:651
+R1
+=1-f48e388b9714-662853e5-50cbb-7542
+R2
+R3
+n@_opt1
+R4
+vcontroller_tx
+Z5 DXx6 sv_std 3 std 0 22 >9az<^>2ff9DAl3OFGaAf1
+!s110 1713917645
+!i10b 1
+!s100 bOGg8Gmj;>M?RXkB2N^Fe3
+IUS7feS4Ff]V0Se3S;h2Fm1
+Z6 VDg1SIo80bB@j0V0VzS_@n1
+!s105 controller_tx_sv_unit
+S1
+R0
+w1713917637
+8source/controller_tx.sv
+Fsource/controller_tx.sv
+L0 7
+Z7 OE;L;10.7a;67
+r1
+!s85 0
+31
+!s108 1713917645.000000
+!s107 source/controller_tx.sv|
+!s90 -sv|-work|source_work|source/controller_tx.sv|
+!i113 0
+Z8 o-sv -work source_work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R3
+vdata_buffer_rx
+R5
+Z9 !s110 1713884960
+!i10b 1
+!s100 Rho];LTbh]ALK_<6E>RWQ1
+I8RkY?jmWGlf3H?zZkG8IP2
+R6
+!s105 data_buffer_rx_sv_unit
+S1
+R0
+w1713820726
+8source/data_buffer_rx.sv
+Fsource/data_buffer_rx.sv
+L0 7
+R7
+r1
+!s85 0
+31
+Z10 !s108 1713884960.000000
+!s107 source/data_buffer_rx.sv|
+!s90 -sv|-work|source_work|source/data_buffer_rx.sv|
+!i113 0
+R8
+R3
+vdata_buffer_tx
+R5
+R9
+!i10b 1
+!s100 oPP<L8VLD:X:4=Y0z17d01
+I0YFg5LP>Vkc[WaMi^6LoK3
+R6
+!s105 data_buffer_tx_sv_unit
+S1
+R0
+w1713833520
+8source/data_buffer_tx.sv
+Fsource/data_buffer_tx.sv
+L0 7
+R7
+r1
+!s85 0
+31
+R10
+!s107 source/data_buffer_tx.sv|
+!s90 -sv|-work|source_work|source/data_buffer_tx.sv|
+!i113 0
+R8
+R3
+vencoder
+R5
+!s110 1713918944
+!i10b 1
+!s100 B6BdP9^zFFIG7I<PY8RNU0
+I@D]W^Yj8`^5@A?SViRE^:3
+R6
+!s105 encoder_sv_unit
+S1
+R0
+w1713918931
+8source/encoder.sv
+Fsource/encoder.sv
+L0 7
+R7
+r1
+!s85 0
+31
+!s108 1713918944.000000
+!s107 source/encoder.sv|
+!s90 -sv|-work|source_work|source/encoder.sv|
+!i113 0
+R8
+R3
+vflex_counter
+R5
+Z11 !s110 1713884959
+!i10b 1
+!s100 ce9YBH0=Wa?JdkoF]f>>G0
+I5IoBbIzWl[n2P7gSeMDMB0
+R6
+!s105 flex_counter_sv_unit
+S1
+R0
+w1712687722
+8source/flex_counter.sv
+Fsource/flex_counter.sv
+L0 8
+R7
+r1
+!s85 0
+31
+Z12 !s108 1713884959.000000
+!s107 source/flex_counter.sv|
+!s90 -sv|-work|source_work|source/flex_counter.sv|
+!i113 0
+R8
+R3
+vflex_pts_sr
+R5
+R11
+!i10b 1
+!s100 f@cm9NH<_L^WPgRPjbK7>2
+I]@H9fkgT3H76Z_B0JNB[>1
+R6
+!s105 flex_pts_sr_sv_unit
+S1
+R0
+w1713299608
+8source/flex_pts_sr.sv
+Fsource/flex_pts_sr.sv
+L0 7
+R7
+r1
+!s85 0
+31
+R12
+!s107 source/flex_pts_sr.sv|
+!s90 -sv|-work|source_work|source/flex_pts_sr.sv|
+!i113 0
+R8
+R3
+vshift_register_tx
+R5
+!s110 1713912859
+!i10b 1
+!s100 LLI:FRD701GSE_8>@X6KN2
+IL5@_nTKz>MB8TH5Ck:lJI1
+R6
+!s105 shift_register_tx_sv_unit
+S1
+R0
+w1713912836
+8source/shift_register_tx.sv
+Fsource/shift_register_tx.sv
+L0 7
+R7
+r1
+!s85 0
+31
+!s108 1713912859.000000
+!s107 source/shift_register_tx.sv|
+!s90 -sv|-work|source_work|source/shift_register_tx.sv|
+!i113 0
+R8
+R3
+vtb_usb_tx_data_buffer
+R5
+!s110 1713918301
+!i10b 1
+!s100 3bIZOXNMLa<7H2N3z;N2g1
+IIJBfXNd^SDz7S[5eRRG1H1
+R6
+!s105 tb_usb_tx_data_buffer_sv_unit
+S1
+R0
+w1713918252
+8source/tb_usb_tx_data_buffer.sv
+Fsource/tb_usb_tx_data_buffer.sv
+L0 8
+R7
+r1
+!s85 0
+31
+!s108 1713918301.000000
+!s107 source/tb_usb_tx_data_buffer.sv|
+!s90 -sv|-work|source_work|source/tb_usb_tx_data_buffer.sv|
+!i113 0
+R8
+R3
+vtimer2_tx
+R5
+R9
+!i10b 1
+!s100 ;Yg6XI]f^5WF<UnWRFXgo3
+IGK`e?[4UgDFYZOJg:W8P_3
+R6
+!s105 timer2_tx_sv_unit
+S1
+R0
+w1713220365
+8source/timer2_tx.sv
+Fsource/timer2_tx.sv
+L0 7
+R7
+r1
+!s85 0
+31
+R10
+!s107 source/timer2_tx.sv|
+!s90 -sv|-work|source_work|source/timer2_tx.sv|
+!i113 0
+R8
+R3
+vtimer3_tx
+R5
+R9
+!i10b 1
+!s100 OhgZM=c]hB_MZo:gaX:jb3
+IO6FY:VTYMEaO428ELeOn30
+R6
+!s105 timer3_tx_sv_unit
+S1
+R0
+w1713780016
+8source/timer3_tx.sv
+Fsource/timer3_tx.sv
+L0 7
+R7
+r1
+!s85 0
+31
+R10
+!s107 source/timer3_tx.sv|
+!s90 -sv|-work|source_work|source/timer3_tx.sv|
+!i113 0
+R8
+R3
+vtimer4_tx
+R5
+R9
+!i10b 1
+!s100 ;KK7Uh03@b36mI7Xb@GEC3
+I3ON>_b<fchA5SG<]j=7gg0
+R6
+!s105 timer4_tx_sv_unit
+S1
+R0
+w1713813953
+8source/timer4_tx.sv
+Fsource/timer4_tx.sv
+L0 7
+R7
+r1
+!s85 0
+31
+R10
+!s107 source/timer4_tx.sv|
+!s90 -sv|-work|source_work|source/timer4_tx.sv|
+!i113 0
+R8
+R3
+vtimer_tx
+R5
+R11
+!i10b 1
+!s100 nJAF2GH^<1^4I:5B?723A3
+IOKT9`YUVkfRJTKZ8d@LA60
+R6
+!s105 timer_tx_sv_unit
+S1
+R0
+w1712870222
+8source/timer_tx.sv
+Fsource/timer_tx.sv
+L0 7
+R7
+r1
+!s85 0
+31
+R12
+!s107 source/timer_tx.sv|
+!s90 -sv|-work|source_work|source/timer_tx.sv|
+!i113 0
+R8
+R3
+vusb_tx
+R5
+!s110 1713915163
+!i10b 1
+!s100 MaHjdNUBCK_;n7K>ZAB1F3
+Ifa3A12=G3c0:@;;5oBje<0
+R6
+!s105 usb_tx_sv_unit
+S1
+R0
+w1713915117
+8source/usb_tx.sv
+Fsource/usb_tx.sv
+L0 7
+R7
+r1
+!s85 0
+31
+!s108 1713915163.000000
+!s107 source/usb_tx.sv|
+!s90 -sv|-work|source_work|source/usb_tx.sv|
+!i113 0
+R8
+R3
+vusb_tx_data_buffer
+R5
+R11
+!i10b 1
+!s100 H:[BY92iPb2kEE5X=VP`d1
+Io[U>kRC>0FS3]G:olVH1_1
+R6
+!s105 usb_tx_data_buffer_sv_unit
+S1
+R0
+w1713833998
+8source/usb_tx_data_buffer.sv
+Fsource/usb_tx_data_buffer.sv
+L0 7
+R7
+r1
+!s85 0
+31
+R12
+!s107 source/usb_tx_data_buffer.sv|
+!s90 -sv|-work|source_work|source/usb_tx_data_buffer.sv|
+!i113 0
+R8
+R3

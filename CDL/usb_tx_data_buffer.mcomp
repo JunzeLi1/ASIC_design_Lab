@@ -1,0 +1,9 @@
+QuestaSim vlog 10.7a Compiler 2018.03 Mar 26 2018
+Start time: 21:22:37 on Apr 23,2024
+vlog -sv -work mapped_work source/tb_usb_tx_data_buffer.sv 
+-- Compiling module tb_usb_tx_data_buffer
+
+Top level modules:
+	tb_usb_tx_data_buffer
+End time: 21:22:37 on Apr 23,2024, Elapsed time: 0:00:00
+Errors: 0, Warnings: 0

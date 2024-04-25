@@ -1,0 +1,298 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/ecegrid/a/mg39/ece337/CDL_Final
+vahb_lite_slave
+Z1 DXx6 sv_std 3 std 0 22 >9az<^>2ff9DAl3OFGaAf1
+!s110 1713991093
+!i10b 1
+!s100 BT8BY[jjf8j^X=c[B2kAV2
+IoX8`JE`ezlbCeS6EFaiGB1
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+!s105 ahb_lite_slave_sv_unit
+S1
+R0
+w1713991093
+8/home/ecegrid/a/mg39/ece337/CDL_Final/CDL/source/ahb_lite_slave.sv
+F/home/ecegrid/a/mg39/ece337/CDL_Final/CDL/source/ahb_lite_slave.sv
+L0 20
+Z3 OE;L;10.7a;67
+r1
+!s85 0
+31
+!s108 1713991093.000000
+!s107 /home/ecegrid/a/mg39/ece337/CDL_Final/CDL/source/ahb_lite_slave.sv|
+!s90 -nologo|-work|Source|/home/ecegrid/a/mg39/ece337/CDL_Final/CDL/source/ahb_lite_slave.sv|
+!i113 0
+Z4 o-nologo -work Source -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z5 tCvgOpt 0
+vcontroller_tx
+R1
+!s110 1713990157
+!i10b 1
+!s100 bOGg8Gmj;>M?RXkB2N^Fe3
+IaCP_]k<ZTfg6;<T3:1bnE2
+R2
+!s105 controller_tx_sv_unit
+S1
+R0
+w1713917637
+8/home/ecegrid/a/mg39/ece337/CDL_Final/CDL/source/controller_tx.sv
+F/home/ecegrid/a/mg39/ece337/CDL_Final/CDL/source/controller_tx.sv
+L0 7
+R3
+r1
+!s85 0
+31
+!s108 1713990157.000000
+!s107 /home/ecegrid/a/mg39/ece337/CDL_Final/CDL/source/controller_tx.sv|
+!s90 -nologo|-work|Source|/home/ecegrid/a/mg39/ece337/CDL_Final/CDL/source/controller_tx.sv|
+!i113 0
+R4
+R5
+vdata_buffer_rx
+R1
+!s110 1713934473
+!i10b 1
+!s100 Rho];LTbh]ALK_<6E>RWQ1
+I@8@l;nJM3E6cm[]eXYU<72
+R2
+!s105 data_buffer_rx_sv_unit
+S1
+R0
+w1713820726
+8/home/ecegrid/a/mg39/ece337/CDL_Final/CDL/source/data_buffer_rx.sv
+F/home/ecegrid/a/mg39/ece337/CDL_Final/CDL/source/data_buffer_rx.sv
+L0 7
+R3
+r1
+!s85 0
+31
+!s108 1713934473.000000
+!s107 /home/ecegrid/a/mg39/ece337/CDL_Final/CDL/source/data_buffer_rx.sv|
+!s90 -nologo|-work|Source|/home/ecegrid/a/mg39/ece337/CDL_Final/CDL/source/data_buffer_rx.sv|
+!i113 0
+R4
+R5
+vdata_buffer_tx
+R1
+!s110 1713934474
+!i10b 1
+!s100 oPP<L8VLD:X:4=Y0z17d01
+IIQ@G5TQH<L<RSQ@0Wn1XK0
+R2
+!s105 data_buffer_tx_sv_unit
+S1
+R0
+w1713833520
+8/home/ecegrid/a/mg39/ece337/CDL_Final/CDL/source/data_buffer_tx.sv
+F/home/ecegrid/a/mg39/ece337/CDL_Final/CDL/source/data_buffer_tx.sv
+L0 7
+R3
+r1
+!s85 0
+31
+!s108 1713934474.000000
+!s107 /home/ecegrid/a/mg39/ece337/CDL_Final/CDL/source/data_buffer_tx.sv|
+!s90 -nologo|-work|Source|/home/ecegrid/a/mg39/ece337/CDL_Final/CDL/source/data_buffer_tx.sv|
+!i113 0
+R4
+R5
+veop_detector
+R1
+Z6 !s110 1713984324
+!i10b 1
+!s100 LN3QYm0lZHMO[GDBn;QA60
+I@45mYKz_3<XoO3S0bi;JI0
+R2
+!s105 eop_detector_sv_unit
+S1
+R0
+Z7 w1713922068
+Z8 8/home/ecegrid/a/mg39/ece337/CDL_Final/CDL/source/eop_detector.sv
+Z9 F/home/ecegrid/a/mg39/ece337/CDL_Final/CDL/source/eop_detector.sv
+L0 9
+R3
+r1
+!s85 0
+31
+Z10 !s108 1713984324.000000
+Z11 !s107 /home/ecegrid/a/mg39/ece337/CDL_Final/CDL/source/eop_detector.sv|
+Z12 !s90 -nologo|-work|Source|/home/ecegrid/a/mg39/ece337/CDL_Final/CDL/source/eop_detector.sv|
+!i113 0
+R4
+R5
+Xeop_detector_sv_unit
+R1
+R6
+!i10b 1
+!s100 T=0jWC@CnG=XS1S2cWFT>0
+IcjJ:KJTKl]2J`>:F:U2]83
+VcjJ:KJTKl]2J`>:F:U2]83
+!i103 1
+S1
+R0
+R7
+R8
+R9
+L0 18
+R3
+r1
+!s85 0
+31
+R10
+R11
+R12
+!i113 0
+R4
+R5
+vflex_counter
+R1
+!s110 1713984323
+!i10b 1
+!s100 ce9YBH0=Wa?JdkoF]f>>G0
+IDZ>C600S;R<dWg;N2Tb703
+R2
+!s105 flex_counter_sv_unit
+S1
+R0
+w1712687722
+8/home/ecegrid/a/mg39/ece337/CDL_Final/CDL/source/flex_counter.sv
+F/home/ecegrid/a/mg39/ece337/CDL_Final/CDL/source/flex_counter.sv
+L0 8
+R3
+r1
+!s85 0
+31
+!s108 1713984323.000000
+!s107 /home/ecegrid/a/mg39/ece337/CDL_Final/CDL/source/flex_counter.sv|
+!s90 -nologo|-work|Source|/home/ecegrid/a/mg39/ece337/CDL_Final/CDL/source/flex_counter.sv|
+!i113 0
+R4
+R5
+vshift_register_tx
+R1
+!s110 1713985313
+!i10b 1
+!s100 LLI:FRD701GSE_8>@X6KN2
+Iz0]B9^K4MAJTL`b]GQ>S61
+R2
+!s105 shift_register_tx_sv_unit
+S1
+R0
+w1713912836
+8/home/ecegrid/a/mg39/ece337/CDL_Final/CDL/source/shift_register_tx.sv
+F/home/ecegrid/a/mg39/ece337/CDL_Final/CDL/source/shift_register_tx.sv
+L0 7
+R3
+r1
+!s85 0
+31
+!s108 1713985312.000000
+!s107 /home/ecegrid/a/mg39/ece337/CDL_Final/CDL/source/shift_register_tx.sv|
+!s90 -nologo|-work|Source|/home/ecegrid/a/mg39/ece337/CDL_Final/CDL/source/shift_register_tx.sv|
+!i113 0
+R4
+R5
+vtb_ahb_lite_slave
+R1
+!s110 1713983948
+!i10b 1
+!s100 4<X34aHLlZaJ9gKz;F1nB0
+I>1^8X<?`6kl7efQhKeBHJ1
+R2
+!s105 tb_ahb_lite_slave_sv_unit
+S1
+R0
+w1713922067
+8/home/ecegrid/a/mg39/ece337/CDL_Final/CDL/source/tb_ahb_lite_slave.sv
+F/home/ecegrid/a/mg39/ece337/CDL_Final/CDL/source/tb_ahb_lite_slave.sv
+Z13 L0 15
+R3
+r1
+!s85 0
+31
+!s108 1713983948.000000
+!s107 /home/ecegrid/a/mg39/ece337/CDL_Final/CDL/source/tb_ahb_lite_slave.sv|
+!s90 -nologo|-work|Source|/home/ecegrid/a/mg39/ece337/CDL_Final/CDL/source/tb_ahb_lite_slave.sv|
+!i113 0
+R4
+R5
+vtb_top
+R1
+!s110 1713991477
+!i10b 1
+!s100 JDXLk;Nk3V7@=OP2:?:c;1
+I?2^hDNeEnX6[EfzWzkd7d2
+R2
+!s105 tb_top_sv_unit
+S1
+R0
+w1713991477
+8/home/ecegrid/a/mg39/ece337/CDL_Final/CDL/source/tb_top.sv
+F/home/ecegrid/a/mg39/ece337/CDL_Final/CDL/source/tb_top.sv
+R13
+R3
+r1
+!s85 0
+31
+!s108 1713991477.000000
+!s107 /home/ecegrid/a/mg39/ece337/CDL_Final/CDL/source/tb_top.sv|
+!s90 -nologo|-work|Source|/home/ecegrid/a/mg39/ece337/CDL_Final/CDL/source/tb_top.sv|
+!i113 0
+R4
+R5
+vtop
+R1
+!s110 1713984242
+!i10b 1
+!s100 7n3QJ]C4T5mD^<iXPQl3J3
+Iho^[B[=^5:c3oS?HE@8ZY1
+R2
+!s105 top_sv_unit
+S1
+R0
+w1713984242
+8/home/ecegrid/a/mg39/ece337/CDL_Final/CDL/source/top.sv
+F/home/ecegrid/a/mg39/ece337/CDL_Final/CDL/source/top.sv
+L0 8
+R3
+r1
+!s85 0
+31
+!s108 1713984242.000000
+!s107 /home/ecegrid/a/mg39/ece337/CDL_Final/CDL/source/top.sv|
+!s90 -nologo|-work|Source|/home/ecegrid/a/mg39/ece337/CDL_Final/CDL/source/top.sv|
+!i113 0
+R4
+R5
+vusb_receiver
+R1
+!s110 1713984035
+!i10b 1
+!s100 O_zZ0Z^U_GIZ[mOWbV0DC3
+I2F1R0iZVenR:K3>[bD6zT3
+R2
+!s105 usb_receiver_sv_unit
+S1
+R0
+R7
+8/home/ecegrid/a/mg39/ece337/CDL_Final/CDL/source/usb_receiver.sv
+F/home/ecegrid/a/mg39/ece337/CDL_Final/CDL/source/usb_receiver.sv
+L0 9
+R3
+r1
+!s85 0
+31
+!s108 1713984035.000000
+!s107 /home/ecegrid/a/mg39/ece337/CDL_Final/CDL/source/usb_receiver.sv|
+!s90 -nologo|-work|Source|/home/ecegrid/a/mg39/ece337/CDL_Final/CDL/source/usb_receiver.sv|
+!i113 0
+R4
+R5

@@ -1,0 +1,9 @@
+QuestaSim vlog 10.7a Compiler 2018.03 Mar 26 2018
+Start time: 18:52:31 on Apr 24,2024
+vlog -sv -work mapped_work source/tb_top.sv 
+-- Compiling module tb_top
+
+Top level modules:
+	tb_top
+End time: 18:52:31 on Apr 24,2024, Elapsed time: 0:00:00
+Errors: 0, Warnings: 0

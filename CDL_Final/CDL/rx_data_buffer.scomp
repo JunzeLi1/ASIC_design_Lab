@@ -1,0 +1,11 @@
+QuestaSim vlog 10.7a Compiler 2018.03 Mar 26 2018
+Start time: 18:24:55 on Apr 24,2024
+vlog -sv -work source_work source/rx_data_buffer.sv 
+-- Compiling module rx_data_buffer
+** Warning: source/rx_data_buffer.sv(61): (vlog-2283) Extra semicolon in $unit (global) scope.
+** Warning: source/rx_data_buffer.sv(61): (vlog-2284) Empty $unit scope found.
+
+Top level modules:
+	rx_data_buffer
+End time: 18:24:56 on Apr 24,2024, Elapsed time: 0:00:01
+Errors: 0, Warnings: 2

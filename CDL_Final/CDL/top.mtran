@@ -1,0 +1,290 @@
+# //  Questa Sim
+# //  Version 10.7a linux Mar 26 2018
+# //
+# //  Copyright 1991-2018 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# vsim -Lf /home/ecegrid/a/ece337/Course_Prod/IP_Libs/Lab_IP_Lib/Vsim -L /home/ecegrid/a/ece337/Course_Prod/Cell_Libs/AMI_05/vhdl_work -L /home/ecegrid/a/ece337/Class0.5u/GOLD_LIB "+no_glitch_msg" -coverage -voptargs="+acc" -suppress 12110 -i -t ps mapped_work.tb_top 
+# Start time: 18:52:35 on Apr 24,2024
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: /home/ecegrid/a/ece337/Course_Prod/IP_Libs/Lab_IP_Lib/Source/ahb_lite_bus.sv(77): (vopt-2240) Treating stand-alone use of function 'pop_front' as an implicit VOID cast.
+# ** Warning: mapped/top.v(976): (vopt-2685) [TFMPC] - Too few port connections for 'bit_counter'.  Expected 7, found 6.
+# ** Warning: mapped/top.v(976): (vopt-2718) [TFMPC] - Missing connection for port 'count_out'.
+# ** Warning: mapped/top.v(1866): (vopt-2685) [TFMPC] - Too few port connections for 'CNT1'.  Expected 7, found 6.
+# ** Warning: mapped/top.v(1866): (vopt-2718) [TFMPC] - Missing connection for port 'count_out'.
+# ** Warning: mapped/top.v(1869): (vopt-2685) [TFMPC] - Too few port connections for 'CNT2'.  Expected 7, found 6.
+# ** Warning: mapped/top.v(1869): (vopt-2718) [TFMPC] - Missing connection for port 'count_out'.
+# ** Warning: mapped/top.v(2041): (vopt-2685) [TFMPC] - Too few port connections for 'CNT1'.  Expected 7, found 6.
+# ** Warning: mapped/top.v(2041): (vopt-2718) [TFMPC] - Missing connection for port 'count_out'.
+# ** Warning: mapped/top.v(2135): (vopt-2685) [TFMPC] - Too few port connections for 'CNT1'.  Expected 7, found 6.
+# ** Warning: mapped/top.v(2135): (vopt-2718) [TFMPC] - Missing connection for port 'count_out'.
+# ** Warning: mapped/top.v(1945): (vopt-2685) [TFMPC] - Too few port connections for 'CNT1'.  Expected 7, found 6.
+# ** Warning: mapped/top.v(1945): (vopt-2718) [TFMPC] - Missing connection for port 'count_out'.
+# ** Warning: mapped/top.v(19668): (vopt-2685) [TFMPC] - Too few port connections for 'sub_120'.  Expected 5, found 4.
+# ** Warning: mapped/top.v(19668): (vopt-2718) [TFMPC] - Missing connection for port 'CO'.
+# ** Warning: mapped/top.v(7880): (vopt-2685) [TFMPC] - Too few port connections for 'sub_166'.  Expected 5, found 4.
+# ** Warning: mapped/top.v(7880): (vopt-2718) [TFMPC] - Missing connection for port 'CO'.
+# ** Warning: mapped/top.v(23866): (vopt-2685) [TFMPC] - Too few port connections for 'BUS'.  Expected 25, found 24.
+# ** Warning: mapped/top.v(23866): (vopt-2718) [TFMPC] - Missing connection for port 'd_mode'.
+# Loading sv_std.std
+# Loading work.tb_top(fast)
+# Loading /home/ecegrid/a/ece337/Course_Prod/IP_Libs/Lab_IP_Lib/Vsim.ahb_lite_bus(fast)
+# Loading work.top(fast)
+# Loading work.ahb_lite_slave(fast)
+# Loading work.usb_receiver(fast)
+# Loading work.sync_high(fast)
+# Loading work.sync_low(fast)
+# Loading work.eop_detector(fast)
+# Loading work.edge_detector(fast)
+# Loading work.decoder(fast)
+# Loading work.timer(fast)
+# Loading work.flex_counter_NUM_CNT_BITS4_3(fast)
+# Loading work.shift_register(fast)
+# Loading work.flex_stp_sr_NUM_BITS8_SHIFT_MSB0(fast)
+# Loading work.rcu(fast)
+# Loading work.rx_data_buffer(fast)
+# Loading work.usb_tx(fast)
+# Loading work.controller_tx(fast)
+# Loading work.timer_tx(fast)
+# Loading work.flex_counter_NUM_CNT_BITS4_2(fast)
+# Loading work.flex_counter_NUM_CNT_BITS4_1(fast)
+# Loading work.timer2_tx(fast)
+# Loading work.flex_counter_NUM_CNT_BITS4_0(fast)
+# Loading work.timer3_tx(fast)
+# Loading work.flex_counter_NUM_CNT_BITS6_1(fast)
+# Loading work.timer4_tx(fast)
+# Loading work.flex_counter_NUM_CNT_BITS6_0(fast)
+# Loading work.shift_register_tx(fast)
+# Loading work.flex_pts_sr_NUM_BITS8_SHIFT_MSB0(fast)
+# Loading work.shift_register_tx_DW01_inc_0(fast)
+# Loading work.encoder(fast)
+# Loading work.data_buffer_tx(fast)
+# Loading work.data_buffer_tx_DW01_sub_0(fast)
+# Loading work.data_buffer_tx_DW01_inc_1(fast)
+# Loading work.data_buffer_rx(fast)
+# Loading work.data_buffer_rx_DW01_sub_0(fast)
+# Loading work.data_buffer_rx_DW01_inc_1(fast)
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.math_real(body)
+# Loading /home/ecegrid/a/ece337/Course_Prod/Cell_Libs/AMI_05/vhdl_work.dffsr(metastabilitywrapperarch)#1
+# Loading ieee.vital_timing(body)
+# Loading ieee.vital_primitives(body)
+# Loading /home/ecegrid/a/ece337/Course_Prod/Cell_Libs/AMI_05/vhdl_work.prim(body)
+# Loading /home/ecegrid/a/ece337/Course_Prod/Cell_Libs/AMI_05/vhdl_work.dffsr_core(behavioral)#1
+# Loading /home/ecegrid/a/ece337/Course_Prod/Cell_Libs/AMI_05/vhdl_work.dffposx1(metastabilitywrapperarch)#1
+# Loading /home/ecegrid/a/ece337/Course_Prod/Cell_Libs/AMI_05/vhdl_work.dffposx1_core(behavioral)#1
+# Loading /home/ecegrid/a/ece337/Course_Prod/Cell_Libs/AMI_05/vhdl_work.and2x2(behavioral)#1
+# Loading /home/ecegrid/a/ece337/Course_Prod/Cell_Libs/AMI_05/vhdl_work.nor2x1(behavioral)#1
+# Loading /home/ecegrid/a/ece337/Course_Prod/Cell_Libs/AMI_05/vhdl_work.nand2x1(behavioral)#1
+# Loading /home/ecegrid/a/ece337/Course_Prod/Cell_Libs/AMI_05/vhdl_work.oai21x1(behavioral)#1
+# Loading /home/ecegrid/a/ece337/Course_Prod/Cell_Libs/AMI_05/vhdl_work.nand3x1(behavioral)#1
+# Loading /home/ecegrid/a/ece337/Course_Prod/Cell_Libs/AMI_05/vhdl_work.aoi22x1(behavioral)#1
+# Loading /home/ecegrid/a/ece337/Course_Prod/Cell_Libs/AMI_05/vhdl_work.aoi21x1(behavioral)#1
+# Loading /home/ecegrid/a/ece337/Course_Prod/Cell_Libs/AMI_05/vhdl_work.oai22x1(behavioral)#1
+# Loading /home/ecegrid/a/ece337/Course_Prod/Cell_Libs/AMI_05/vhdl_work.xnor2x1(behavioral)#1
+# Loading /home/ecegrid/a/ece337/Course_Prod/Cell_Libs/AMI_05/vhdl_work.or2x2(behavioral)#1
+# Loading /home/ecegrid/a/ece337/Course_Prod/Cell_Libs/AMI_05/vhdl_work.invx1(behavioral)#1
+# Loading /home/ecegrid/a/ece337/Course_Prod/Cell_Libs/AMI_05/vhdl_work.invx2(behavioral)#1
+# Loading /home/ecegrid/a/ece337/Course_Prod/Cell_Libs/AMI_05/vhdl_work.bufx2(behavioral)#1
+# Loading /home/ecegrid/a/ece337/Course_Prod/Cell_Libs/AMI_05/vhdl_work.or2x1(behavioral)#1
+# Loading /home/ecegrid/a/ece337/Course_Prod/Cell_Libs/AMI_05/vhdl_work.xor2x1(behavioral)#1
+# Loading /home/ecegrid/a/ece337/Course_Prod/Cell_Libs/AMI_05/vhdl_work.and2x1(behavioral)#1
+# Loading /home/ecegrid/a/ece337/Course_Prod/Cell_Libs/AMI_05/vhdl_work.hax1(behavioral)#1
+# Loading /home/ecegrid/a/ece337/Course_Prod/Cell_Libs/AMI_05/vhdl_work.mux2x1(behavioral)#1
+# Loading /home/ecegrid/a/ece337/Course_Prod/Cell_Libs/AMI_05/vhdl_work.nor3x1(behavioral)#1
+# Loading /home/ecegrid/a/ece337/Course_Prod/Cell_Libs/AMI_05/vhdl_work.fax1(behavioral)#1
+# ** Warning: (vsim-3015) [PCDPC] - Port size (3) does not match connection size (2) for port 'hsize'. The port definition is at: /home/ecegrid/a/ece337/Course_Prod/IP_Libs/Lab_IP_Lib/Source/ahb_lite_bus.sv(35).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_top/BFM File: source/tb_top.sv Line: 125
+# ** Warning: (vsim-8822) [TFMPC] - Missing Verilog connection for formal VHDL port 'YC'.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_top/DUT/TXDBUFF/sub_166/U2_5 File: mapped/top.v Line: 2419
+# ** Warning: (vsim-8822) [TFMPC] - Missing Verilog connection for formal VHDL port 'YC'.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_top/DUT/RXDBUFF/sub_120/U2_5 File: mapped/top.v Line: 9901
+source wave_top_mapped.do
+run -a
+# ** Warning: DFFPOSX1 instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5310 ps  Iteration: 0  Instance: /tb_top/DUT/BUS/\tx_data_reg[31] 
+# ** Warning: DFFPOSX1 instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5310 ps  Iteration: 0  Instance: /tb_top/DUT/BUS/\tx_data_reg[30] 
+# ** Warning: DFFPOSX1 instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5310 ps  Iteration: 0  Instance: /tb_top/DUT/BUS/\tx_data_reg[29] 
+# ** Warning: DFFPOSX1 instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5310 ps  Iteration: 0  Instance: /tb_top/DUT/BUS/\tx_data_reg[28] 
+# ** Warning: DFFPOSX1 instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5310 ps  Iteration: 0  Instance: /tb_top/DUT/BUS/\tx_data_reg[27] 
+# ** Warning: DFFPOSX1 instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5310 ps  Iteration: 0  Instance: /tb_top/DUT/BUS/\tx_data_reg[26] 
+# ** Warning: DFFPOSX1 instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5310 ps  Iteration: 0  Instance: /tb_top/DUT/BUS/\tx_data_reg[25] 
+# ** Warning: DFFPOSX1 instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5310 ps  Iteration: 0  Instance: /tb_top/DUT/BUS/\tx_data_reg[24] 
+# ** Warning: DFFPOSX1 instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5310 ps  Iteration: 0  Instance: /tb_top/DUT/BUS/\tx_data_reg[23] 
+# ** Warning: DFFPOSX1 instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5310 ps  Iteration: 0  Instance: /tb_top/DUT/BUS/\tx_data_reg[22] 
+# ** Warning: DFFPOSX1 instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5310 ps  Iteration: 0  Instance: /tb_top/DUT/BUS/\tx_data_reg[21] 
+# ** Warning: DFFPOSX1 instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5310 ps  Iteration: 0  Instance: /tb_top/DUT/BUS/\tx_data_reg[20] 
+# ** Warning: DFFPOSX1 instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5310 ps  Iteration: 0  Instance: /tb_top/DUT/BUS/\tx_data_reg[19] 
+# ** Warning: DFFPOSX1 instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5310 ps  Iteration: 0  Instance: /tb_top/DUT/BUS/\tx_data_reg[18] 
+# ** Warning: DFFPOSX1 instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5310 ps  Iteration: 0  Instance: /tb_top/DUT/BUS/\tx_data_reg[17] 
+# ** Warning: DFFPOSX1 instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5310 ps  Iteration: 0  Instance: /tb_top/DUT/BUS/\tx_data_reg[16] 
+# ** Warning: DFFPOSX1 instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5310 ps  Iteration: 0  Instance: /tb_top/DUT/BUS/\tx_data_reg[7] 
+# ** Warning: DFFPOSX1 instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5310 ps  Iteration: 0  Instance: /tb_top/DUT/BUS/\tx_data_reg[6] 
+# ** Warning: DFFPOSX1 instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5310 ps  Iteration: 0  Instance: /tb_top/DUT/BUS/\tx_data_reg[5] 
+# ** Warning: DFFPOSX1 instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5310 ps  Iteration: 0  Instance: /tb_top/DUT/BUS/\tx_data_reg[4] 
+# ** Warning: DFFPOSX1 instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5310 ps  Iteration: 0  Instance: /tb_top/DUT/BUS/\tx_data_reg[3] 
+# ** Warning: DFFPOSX1 instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5310 ps  Iteration: 0  Instance: /tb_top/DUT/BUS/\tx_data_reg[2] 
+# ** Warning: DFFPOSX1 instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5310 ps  Iteration: 0  Instance: /tb_top/DUT/BUS/\tx_data_reg[1] 
+# ** Warning: DFFPOSX1 instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5310 ps  Iteration: 0  Instance: /tb_top/DUT/BUS/\tx_data_reg[0] 
+# ** Warning: DFFPOSX1 instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5310 ps  Iteration: 0  Instance: /tb_top/DUT/BUS/\tx_data_reg[8] 
+# ** Warning: DFFPOSX1 instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5310 ps  Iteration: 0  Instance: /tb_top/DUT/BUS/\tx_data_reg[9] 
+# ** Warning: DFFPOSX1 instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5310 ps  Iteration: 0  Instance: /tb_top/DUT/BUS/\tx_data_reg[10] 
+# ** Warning: DFFPOSX1 instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5310 ps  Iteration: 0  Instance: /tb_top/DUT/BUS/\tx_data_reg[11] 
+# ** Warning: DFFPOSX1 instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5310 ps  Iteration: 0  Instance: /tb_top/DUT/BUS/\tx_data_reg[12] 
+# ** Warning: DFFPOSX1 instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5310 ps  Iteration: 0  Instance: /tb_top/DUT/BUS/\tx_data_reg[13] 
+# ** Warning: DFFPOSX1 instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5310 ps  Iteration: 0  Instance: /tb_top/DUT/BUS/\tx_data_reg[14] 
+# ** Warning: DFFPOSX1 instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5310 ps  Iteration: 0  Instance: /tb_top/DUT/BUS/\tx_data_reg[15] 
+# ** Warning: DFFPOSX1 instance metastable output value decayed to a '1' value
+#    Time: 5450 ps  Iteration: 0  Instance: /tb_top/DUT/BUS/\tx_data_reg[31] 
+# ** Warning: DFFPOSX1 instance metastable output value decayed to a '1' value
+#    Time: 5450 ps  Iteration: 0  Instance: /tb_top/DUT/BUS/\tx_data_reg[30] 
+# ** Warning: DFFPOSX1 instance metastable output value decayed to a '1' value
+#    Time: 5450 ps  Iteration: 0  Instance: /tb_top/DUT/BUS/\tx_data_reg[29] 
+# ** Warning: DFFPOSX1 instance metastable output value decayed to a '1' value
+#    Time: 5450 ps  Iteration: 0  Instance: /tb_top/DUT/BUS/\tx_data_reg[28] 
+# ** Warning: DFFPOSX1 instance metastable output value decayed to a '1' value
+#    Time: 5450 ps  Iteration: 0  Instance: /tb_top/DUT/BUS/\tx_data_reg[27] 
+# ** Warning: DFFPOSX1 instance metastable output value decayed to a '1' value
+#    Time: 5450 ps  Iteration: 0  Instance: /tb_top/DUT/BUS/\tx_data_reg[26] 
+# ** Warning: DFFPOSX1 instance metastable output value decayed to a '1' value
+#    Time: 5450 ps  Iteration: 0  Instance: /tb_top/DUT/BUS/\tx_data_reg[25] 
+# ** Warning: DFFPOSX1 instance metastable output value decayed to a '1' value
+#    Time: 5450 ps  Iteration: 0  Instance: /tb_top/DUT/BUS/\tx_data_reg[24] 
+# ** Warning: DFFPOSX1 instance metastable output value decayed to a '1' value
+#    Time: 5450 ps  Iteration: 0  Instance: /tb_top/DUT/BUS/\tx_data_reg[23] 
+# ** Warning: DFFPOSX1 instance metastable output value decayed to a '1' value
+#    Time: 5450 ps  Iteration: 0  Instance: /tb_top/DUT/BUS/\tx_data_reg[22] 
+# ** Warning: DFFPOSX1 instance metastable output value decayed to a '1' value
+#    Time: 5450 ps  Iteration: 0  Instance: /tb_top/DUT/BUS/\tx_data_reg[21] 
+# ** Warning: DFFPOSX1 instance metastable output value decayed to a '1' value
+#    Time: 5450 ps  Iteration: 0  Instance: /tb_top/DUT/BUS/\tx_data_reg[20] 
+# ** Warning: DFFPOSX1 instance metastable output value decayed to a '1' value
+#    Time: 5450 ps  Iteration: 0  Instance: /tb_top/DUT/BUS/\tx_data_reg[19] 
+# ** Warning: DFFPOSX1 instance metastable output value decayed to a '1' value
+#    Time: 5450 ps  Iteration: 0  Instance: /tb_top/DUT/BUS/\tx_data_reg[18] 
+# ** Warning: DFFPOSX1 instance metastable output value decayed to a '1' value
+#    Time: 5450 ps  Iteration: 0  Instance: /tb_top/DUT/BUS/\tx_data_reg[17] 
+# ** Warning: DFFPOSX1 instance metastable output value decayed to a '1' value
+#    Time: 5450 ps  Iteration: 0  Instance: /tb_top/DUT/BUS/\tx_data_reg[16] 
+# ** Warning: DFFPOSX1 instance metastable output value decayed to a '1' value
+#    Time: 5450 ps  Iteration: 0  Instance: /tb_top/DUT/BUS/\tx_data_reg[7] 
+# ** Warning: DFFPOSX1 instance metastable output value decayed to a '1' value
+#    Time: 5450 ps  Iteration: 0  Instance: /tb_top/DUT/BUS/\tx_data_reg[6] 
+# ** Warning: DFFPOSX1 instance metastable output value decayed to a '1' value
+#    Time: 5450 ps  Iteration: 0  Instance: /tb_top/DUT/BUS/\tx_data_reg[5] 
+# ** Warning: DFFPOSX1 instance metastable output value decayed to a '1' value
+#    Time: 5450 ps  Iteration: 0  Instance: /tb_top/DUT/BUS/\tx_data_reg[4] 
+# ** Warning: DFFPOSX1 instance metastable output value decayed to a '1' value
+#    Time: 5450 ps  Iteration: 0  Instance: /tb_top/DUT/BUS/\tx_data_reg[3] 
+# ** Warning: DFFPOSX1 instance metastable output value decayed to a '1' value
+#    Time: 5450 ps  Iteration: 0  Instance: /tb_top/DUT/BUS/\tx_data_reg[2] 
+# ** Warning: DFFPOSX1 instance metastable output value decayed to a '1' value
+#    Time: 5450 ps  Iteration: 0  Instance: /tb_top/DUT/BUS/\tx_data_reg[1] 
+# ** Warning: DFFPOSX1 instance metastable output value decayed to a '1' value
+#    Time: 5450 ps  Iteration: 0  Instance: /tb_top/DUT/BUS/\tx_data_reg[0] 
+# ** Warning: DFFPOSX1 instance metastable output value decayed to a '1' value
+#    Time: 5450 ps  Iteration: 0  Instance: /tb_top/DUT/BUS/\tx_data_reg[8] 
+# ** Warning: DFFPOSX1 instance metastable output value decayed to a '1' value
+#    Time: 5450 ps  Iteration: 0  Instance: /tb_top/DUT/BUS/\tx_data_reg[9] 
+# ** Warning: DFFPOSX1 instance metastable output value decayed to a '1' value
+#    Time: 5450 ps  Iteration: 0  Instance: /tb_top/DUT/BUS/\tx_data_reg[10] 
+# ** Warning: DFFPOSX1 instance metastable output value decayed to a '1' value
+#    Time: 5450 ps  Iteration: 0  Instance: /tb_top/DUT/BUS/\tx_data_reg[11] 
+# ** Warning: DFFPOSX1 instance metastable output value decayed to a '1' value
+#    Time: 5450 ps  Iteration: 0  Instance: /tb_top/DUT/BUS/\tx_data_reg[12] 
+# ** Warning: DFFPOSX1 instance metastable output value decayed to a '1' value
+#    Time: 5450 ps  Iteration: 0  Instance: /tb_top/DUT/BUS/\tx_data_reg[13] 
+# ** Warning: DFFPOSX1 instance metastable output value decayed to a '1' value
+#    Time: 5450 ps  Iteration: 0  Instance: /tb_top/DUT/BUS/\tx_data_reg[14] 
+# ** Warning: DFFPOSX1 instance metastable output value decayed to a '1' value
+#    Time: 5450 ps  Iteration: 0  Instance: /tb_top/DUT/BUS/\tx_data_reg[15] 
+# ** Info: Correct 'hrdata' output after DUT reset during Power-on-Reset test case
+#    Time: 50 ns  Scope: tb_top.check_outputs File: source/tb_top.sv Line: 205
+# Causality operation skipped due to absence of debug database file
+# ** Note: $stop    : source/tb_top.sv(820)
+#    Time: 38720 ns  Iteration: 0  Instance: /tb_top
+# Break in Module tb_top at source/tb_top.sv line 820
+# Error Undo Start called while in Redo capture mode
+# UndoStart or Redo start was not called Delete {.main_pane.wave.interior.cs.body.pw.wf.tree.tree1 undo delete 97}
+#  Trace back: 
+#    <2:eval:1: ::Wave::UndoRedoCaptureTransform Delete {.main_pane.wave.interior.cs.body.pw.wf.tree.tree1 undo delete 97}
+#    <1:eval:1: ::Wave::ExecOp insert .main_pane.wave.interior.cs.body.pw.wf -noupdate -position 97 -tree .main_pane.wave.interior.cs.body.pw.wf.tree.tree1 /tb_top/DUT/TXDBUFF/buffer_occupancy
+# UndoStart or Redo start was not called Delete {.main_pane.wave.interior.cs.body.pw.wf.tree.tree1 undo delete 98}
+#  Trace back: 
+#    <2:eval:1: ::Wave::UndoRedoCaptureTransform Delete {.main_pane.wave.interior.cs.body.pw.wf.tree.tree1 undo delete 98}
+#    <1:eval:1: ::Wave::ExecOp insert .main_pane.wave.interior.cs.body.pw.wf -noupdate -position 98 -tree .main_pane.wave.interior.cs.body.pw.wf.tree.tree1 /tb_top/DUT/TXDBUFF/buffer_occupancy1
+# UndoStart or Redo start was not called Delete {.main_pane.wave.interior.cs.body.pw.wf.tree.tree1 undo delete 99}
+#  Trace back: 
+#    <2:eval:1: ::Wave::UndoRedoCaptureTransform Delete {.main_pane.wave.interior.cs.body.pw.wf.tree.tree1 undo delete 99}
+#    <1:eval:1: ::Wave::ExecOp insert .main_pane.wave.interior.cs.body.pw.wf -noupdate -position 99 -tree .main_pane.wave.interior.cs.body.pw.wf.tree.tree1 /tb_top/DUT/TXDBUFF/clear
+# UndoStart or Redo start was not called Delete {.main_pane.wave.interior.cs.body.pw.wf.tree.tree1 undo delete 100}
+#  Trace back: 
+#    <2:eval:1: ::Wave::UndoRedoCaptureTransform Delete {.main_pane.wave.interior.cs.body.pw.wf.tree.tree1 undo delete 100}
+#    <1:eval:1: ::Wave::ExecOp insert .main_pane.wave.interior.cs.body.pw.wf -noupdate -position 100 -tree .main_pane.wave.interior.cs.body.pw.wf.tree.tree1 /tb_top/DUT/TXDBUFF/clk
+# UndoStart or Redo start was not called Delete {.main_pane.wave.interior.cs.body.pw.wf.tree.tree1 undo delete 101}
+#  Trace back: 
+#    <2:eval:1: ::Wave::UndoRedoCaptureTransform Delete {.main_pane.wave.interior.cs.body.pw.wf.tree.tree1 undo delete 101}
+#    <1:eval:1: ::Wave::ExecOp insert .main_pane.wave.interior.cs.body.pw.wf -noupdate -position 101 -tree .main_pane.wave.interior.cs.body.pw.wf.tree.tree1 /tb_top/DUT/TXDBUFF/n_rst
+# UndoStart or Redo start was not called Delete {.main_pane.wave.interior.cs.body.pw.wf.tree.tree1 undo delete 102}
+#  Trace back: 
+#    <2:eval:1: ::Wave::UndoRedoCaptureTransform Delete {.main_pane.wave.interior.cs.body.pw.wf.tree.tree1 undo delete 102}
+#    <1:eval:1: ::Wave::ExecOp insert .main_pane.wave.interior.cs.body.pw.wf -noupdate -position 102 -tree .main_pane.wave.interior.cs.body.pw.wf.tree.tree1 /tb_top/DUT/TXDBUFF/next_buffer_occupancy
+# UndoStart or Redo start was not called Delete {.main_pane.wave.interior.cs.body.pw.wf.tree.tree1 undo delete 103}
+#  Trace back: 
+#    <2:eval:1: ::Wave::UndoRedoCaptureTransform Delete {.main_pane.wave.interior.cs.body.pw.wf.tree.tree1 undo delete 103}
+#    <1:eval:1: ::Wave::ExecOp insert .main_pane.wave.interior.cs.body.pw.wf -noupdate -position 103 -tree .main_pane.wave.interior.cs.body.pw.wf.tree.tree1 /tb_top/DUT/TXDBUFF/store_tx_data
+# UndoStart or Redo start was not called Delete {.main_pane.wave.interior.cs.body.pw.wf.tree.tree1 undo delete 104}
+#  Trace back: 
+#    <2:eval:1: ::Wave::UndoRedoCaptureTransform Delete {.main_pane.wave.interior.cs.body.pw.wf.tree.tree1 undo delete 104}
+#    <1:eval:1: ::Wave::ExecOp insert .main_pane.wave.interior.cs.body.pw.wf -noupdate -position 104 -tree .main_pane.wave.interior.cs.body.pw.wf.tree.tree1 /tb_top/DUT/TXDBUFF/tx_data
+# UndoStart or Redo start was not called Delete {.main_pane.wave.interior.cs.body.pw.wf.tree.tree1 undo delete 105}
+#  Trace back: 
+#    <2:eval:1: ::Wave::UndoRedoCaptureTransform Delete {.main_pane.wave.interior.cs.body.pw.wf.tree.tree1 undo delete 105}
+#    <1:eval:1: ::Wave::ExecOp insert .main_pane.wave.interior.cs.body.pw.wf -noupdate -position 105 -tree .main_pane.wave.interior.cs.body.pw.wf.tree.tree1 /tb_top/DUT/TXDBUFF/tx_packet_data
+# UndoStart or Redo start was not called Delete {.main_pane.wave.interior.cs.body.pw.wf.tree.tree1 undo delete 106}
+#  Trace back: 
+#    <2:eval:1: ::Wave::UndoRedoCaptureTransform Delete {.main_pane.wave.interior.cs.body.pw.wf.tree.tree1 undo delete 106}
+#    <1:eval:1: ::Wave::ExecOp insert .main_pane.wave.interior.cs.body.pw.wf -noupdate -position 106 -tree .main_pane.wave.interior.cs.body.pw.wf.tree.tree1 /tb_top/DUT/TXDBUFF/write_ptr1
+# End time: 19:06:06 on Apr 24,2024, Elapsed time: 0:13:31
+# Errors: 0, Warnings: 87
